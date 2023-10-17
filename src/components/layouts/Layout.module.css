@@ -1,0 +1,8 @@
+.mainLayout {
+    width: 100%;
+    background: #222;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    color: white;
+}
