@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from "./Hero.module.css"
+import naod from "../../assets/images/naod.png"
 
 function Hero() {
     const [timeIs, setTimeIs] = useState(new Date())
@@ -19,7 +20,7 @@ function Hero() {
                 <h2 className={classes.myDescription}>A FrontEnd Web {timeIs.getSeconds() % 2 === 0 ? <p className={classes.designer}>Designer</p> : <p className={classes.developer}>Developer</p>}</h2>
             </div>
             <div className={classes.imageContainer}>
-                <img src="src/assets/images/naod.png" className={classes.myImage} />
+                <img src={naod} className={classes.myImage} />
             </div>
         </div>
     )
