@@ -12,7 +12,8 @@
 }
 
 .myName {
-    font-size: 80px;
+    font-size: 100px;
+    padding-bottom: 5px;
 }
 
 .myImage {
@@ -38,7 +39,7 @@
     width: 100%;
     height: 100%;
     background: rgb(34, 34, 34);
-    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(34, 34, 34, 1) 5%, rgba(255, 255, 255, 0) 100%);
+    background: linear-gradient(0deg, rgba(34, 34, 34, 1) 0%, rgba(34, 34, 34, 1) 1%, rgba(255, 255, 255, 0) 100%);
 }
 
 .textContainer {
@@ -47,16 +48,22 @@
     flex-direction: column;
     align-items: center;
     position: absolute;
-    top: 300px;
+    top: 290px;
 }
 
 .developer, .designer {
-    display: inline;
-    transition: 0.5s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    display: inline-block;
+    transition: 1s cubic-bezier(0.175, 0.885, 0.32, 1.275);
     background: rgba(255, 255, 255, 0.2);
-    backdrop-filter: blur(50px);
     padding: 10px 20px;
     border-radius: 5px;
+    width: 200px;
+    text-align: center;
+    /* display: flex; */
+}
+
+.developerText, .designerText {
+    display: inline;
 }
 
 .designer {

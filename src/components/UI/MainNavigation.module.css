@@ -22,7 +22,7 @@
 .navbarLink {
     margin-left: 20px;
     padding: 10px 20px;
-    border: 2px solid;
+    border: 2px solid white;
     font-weight: bold;
     border-radius: 5px;
     cursor: pointer;
@@ -32,6 +32,12 @@
     background: white;
     color: #333;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: 2px solid white;
+}
+
+.navbarLink:active {
+    background: transparent;
+    color: white;
 }
 
 .logo {
@@ -43,4 +49,9 @@
     justify-content: center;
     height: 70px;
     width: 100px;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
