@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import classes from "./Hero.module.css";
-import naod from "../../assets/images/naod.png";
+import naod from "../../assets/images/Naod.png";
 
 function Hero() {
   const [timeIs, setTimeIs] = useState(new Date());
