@@ -1,0 +1,58 @@
+.skillCard {
+  height: 100px;
+  width: 100%;
+  border-bottom: 2px solid #111;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+  cursor: pointer;
+  padding: 0px 50px;
+}
+
+.skillCard:hover {
+  scale: 1.1;
+  background: white;
+  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
+    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
+    rgba(240, 46, 170, 0.05) 0px 25px;
+  border-radius: 10px;
+  color: #333;
+}
+
+.expertBarContainer {
+  display: flex;
+  width: 20%;
+  height: 40px;
+  background: white;
+  margin: 0px 5px;
+  border-radius: 10px;
+  border: 2px solid #181818;
+  /* overflow: hidden; */
+}
+
+.expertBar {
+  background: #181818;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding-left: 20px;
+  color: white;
+  font-weight: bold;
+}
+
+.row1,
+.row2,
+.row4 {
+  width: 10%;
+}
+
+.row2 {
+  font-size: 40px;
+}
+
+.row3 {
+  width: 30%;
+}

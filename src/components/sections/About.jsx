@@ -1,4 +1,9 @@
-import { fa3, faAd, faLongArrowAltRight, faPlus } from "@fortawesome/free-solid-svg-icons";
+import {
+  fa3,
+  faAd,
+  faLongArrowAltRight,
+  faPlus,
+} from "@fortawesome/free-solid-svg-icons";
 import TW from "../UI/TextWrapper";
 import classes from "./About.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -15,7 +20,7 @@ import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
 
 function About() {
   return (
-    <div className={classes.aboutContainer} id="about">
+    <div className={classes.aboutContainer}>
       <div className={classes.aboutExplanation}>
         <h1 className={classes.aboutTitle}>About Me</h1>
         <p className={classes.aboutDescription}>
@@ -30,7 +35,14 @@ function About() {
           <FontAwesomeIcon icon={fa3} />
           <FontAwesomeIcon icon={faPlus} /> years designing websites.
         </p>
-        <button className={classes.gitContact}><a href="https://github.com/naodalemu" target="blank"><TW fa={faGithub}> Take a look <FontAwesomeIcon icon={faArrowAltCircleRight} /></TW></a></button>
+        <button className={classes.gitContact}>
+          <a href="https://github.com/naodalemu" target="blank">
+            <TW fa={faGithub}>
+              {" "}
+              Take a look <FontAwesomeIcon icon={faArrowAltCircleRight} />
+            </TW>
+          </a>
+        </button>
       </div>
       <div className={classes.aboutImage}>
         <div className={classes.imageContainer}>

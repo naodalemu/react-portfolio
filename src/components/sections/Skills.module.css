@@ -1,0 +1,46 @@
+.skillContainer {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.sectionTitle {
+  margin-bottom: 20px;
+  margin-top: 120px;
+  /* font-size: 40px; */
+}
+
+.skillSelector {
+  display: flex;
+  border: 2px solid #111;
+  border-radius: 10px;
+  overflow: hidden;
+  margin-bottom: 50px;
+  width: fit-content;
+}
+
+.frontSelector {
+  border-right: 2px solid #111;
+}
+
+.frontSelector,
+.backSelector {
+  padding: 10px 10px;
+  font-size: larger;
+  text-align: center;
+  font-weight: bold;
+  cursor: pointer;
+  background: #181818;
+}
+
+.active {
+  background: white;
+  color: #333;
+}
+
+.skillsWrapper {
+  width: 100%;
+  border-top: 2px solid #111;
+}

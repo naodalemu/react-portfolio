@@ -1,6 +1,7 @@
 import MainNavigation from "../UI/MainNavigation";
 import About from "../sections/About";
 import Hero from "../sections/Hero";
+import Skills from "../sections/Skills";
 import classes from "./Layout.module.css";
 
 function Layout() {
@@ -9,6 +10,7 @@ function Layout() {
       <MainNavigation />
       <Hero />
       <About />
+      <Skills />
     </div>
   );
 }

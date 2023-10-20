@@ -33,6 +33,7 @@ function Hero() {
       <div className={classes.imageContainer}>
         <img src={naod} className={classes.myImage} />
       </div>
+      <div id="about" className={classes.aboutNav}></div>
     </div>
   );
 }

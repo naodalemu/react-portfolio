@@ -5,6 +5,7 @@
   justify-content: center;
   background: #222;
   height: 900px;
+  position: relative;
 }
 
 .myDescription {
@@ -79,4 +80,9 @@
 
 .developer {
   color: rgb(0, 224, 224);
+}
+
+.aboutNav {
+  position: absolute;
+  bottom: 0px;
 }
