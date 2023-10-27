@@ -55,3 +55,41 @@ a {
   text-decoration: none;
   color: var(--primary-inverted);
 }
+
+@media screen and (max-width: 910px){
+  .container {
+    position: fixed;
+    width: 100px;
+    height: 80px;
+    flex-direction: column;
+    padding: 0px 10px 40px 10px;
+    backdrop-filter: blur(50px);
+  }
+
+  .container:hover {
+    height: 360px;
+    width: 150px;
+  }
+
+  .logo {
+    padding: 40px 0px 40px 0px;
+    background: transparent;
+    color: var(--primary-inverted);
+  }
+
+  .navContainer {
+    flex-direction: column;
+  }
+
+  .navContainer:hover {
+    display: flex;
+  }
+
+  .navbarLink {
+    margin: 0;
+    text-align: center;
+    font-size: small;
+    padding: 5px 5px;
+    margin-top: 20px;
+  }
+}

@@ -86,3 +86,91 @@
   position: absolute;
   bottom: 0px;
 }
+
+@media screen and (max-width: 850px){
+  .textContainer {
+    top: 220px;
+  }
+
+  .myName {
+    font-size: 80px;
+  }
+
+  .myDescription {
+    font-size: x-large;
+  }
+
+  .imageContainer {
+    height: 700px;
+    width: 600px;
+  }
+
+  .designer, .developer {
+    width: 160px;
+  }
+}
+
+@media screen and (max-width: 630px){
+  .textContainer {
+    top: 250px;
+  }
+
+  .myName {
+    font-size: 60px;
+  }
+
+  .myDescription {
+    font-size: large;
+  }
+
+  .imageContainer {
+    height: 600px;
+    width: 500px;
+    top: 100px;
+  }
+
+  .designer, .developer {
+    width: 130px;
+  }
+}
+
+@media screen and (max-width: 500px){
+  .textContainer {
+    top: 210px;
+  }
+
+  .myName {
+    font-size: 50px;
+  }
+
+  .imageContainer {
+    height: 500px;
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 410px){
+  .container {
+    height: 600px;
+  }
+  .textContainer {
+    top: 160px;
+  }
+
+  .myName {
+    font-size: 40px;
+  }
+
+  .myDescription {
+    font-size: medium;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .imageContainer {
+    height: 400px;
+    width: 300px;
+    top: 130px;
+  }
+}
