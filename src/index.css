@@ -1,3 +1,20 @@
+:root {
+  --primary: #222;
+  --primary-inverted: #fff;
+  --primary-black: #000;
+
+  --about-background: #181818;
+  --about-border: #111;
+  --about-image-shade: rgba(34, 34, 34, 0.2);
+
+  /* Dedicated for the photo overlay on the hero section */
+  --hero-main: rgb(34, 34, 34);
+  --hero-fade: rgba(255, 255, 255, 0);
+
+  /* Navigation colors */
+  --navigation-background: rgba(255, 255, 255, 0.1);
+}
+
 * {
   box-sizing: border-box;
   margin: 0;

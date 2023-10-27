@@ -1,6 +1,6 @@
 .mainLayout {
   width: 100%;
-  background: #222;
+  background: var(--primary);
   display: flex;
   flex-direction: column;
   justify-content: center;

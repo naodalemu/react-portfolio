@@ -5,7 +5,7 @@
   justify-content: space-between;
   padding: 10px 40px 10px 0px;
   height: 70px;
-  background: rgba(255, 255, 255, 0.1);
+  background: var(--navigation-background);
   backdrop-filter: blur(10px);
   border-radius: 10px;
   align-items: center;
@@ -22,27 +22,27 @@
 .navbarLink {
   margin-left: 20px;
   padding: 10px 20px;
-  border: 2px solid white;
+  border: 2px solid var(--primary-inverted);
   font-weight: bold;
   border-radius: 5px;
   cursor: pointer;
 }
 
 .navbarLink:hover {
-  background: white;
-  color: #333;
+  background: var(--primary-inverted);
+  color: var(--primary);
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-  border: 2px solid white;
+  border: 2px solid var(--primary-inverted);
 }
 
 .navbarLink:active {
   background: transparent;
-  color: white;
+  color: var(--primary-inverted);
 }
 
 .logo {
-  background: white;
-  color: #333;
+  background: var(--primary-inverted);
+  color: var(--primary);
   padding: 5px;
   display: flex;
   align-items: center;
@@ -53,5 +53,5 @@
 
 a {
   text-decoration: none;
-  color: white;
+  color: var(--primary-inverted);
 }

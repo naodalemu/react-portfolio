@@ -14,7 +14,7 @@
 
 .skillSelector {
   display: flex;
-  border: 2px solid #111;
+  border: 2px solid var(--about-border);
   border-radius: 10px;
   overflow: hidden;
   margin-bottom: 50px;
@@ -22,7 +22,7 @@
 }
 
 .frontSelector {
-  border-right: 2px solid #111;
+  border-right: 2px solid var(--about-border);
 }
 
 .frontSelector,
@@ -32,15 +32,15 @@
   text-align: center;
   font-weight: bold;
   cursor: pointer;
-  background: #181818;
+  background: var(--about-background);
 }
 
 .active {
-  background: white;
-  color: #333;
+  background: var(--primary-inverted);
+  color: var(--primary);
 }
 
 .skillsWrapper {
   width: 100%;
-  border-top: 2px solid #111;
+  border-top: 2px solid var(--about-border);
 }
