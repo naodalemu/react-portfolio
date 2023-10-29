@@ -44,7 +44,7 @@ function About() {
           </a>
         </button>
       </div>
-      <div className={classes.aboutImage} style={{background: `url(${developer})`, backgroundAttachment: "fixed"}}>
+      <div className={classes.aboutImage} style={{background: `url(${developer})`, backgroundPositionX: "center", backgroundAttachment: "fixed"}}>
         <div className={classes.imageContainer}>
           <img src={developer} className={classes.image} />
         </div>
