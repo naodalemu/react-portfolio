@@ -5,7 +5,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    transition: 800ms cubic-bezier(0.165, 0.84, 0.44, 1);
     cursor: pointer;
     padding: 0px 50px;
 }

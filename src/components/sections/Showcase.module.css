@@ -1,0 +1,24 @@
+.showContainer {
+    width: 80%;
+    border: 1px solid var(--about-border);
+    display: flex;
+    align-items: center;
+}
+
+.toggleLeft, .toggleRight {
+    border: 2px solid var(--primary-inverted);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.toggleLeft:hover, .toggleRight:hover {
+    background: var(--primary-inverted);
+    color: var(--primary);
+}
+
