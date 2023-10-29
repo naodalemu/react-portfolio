@@ -37,6 +37,17 @@
   align-items: center;
 }
 
+.aboutImage::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: var(--primary);
+  border-radius: 0px 7.5px 7.5px 0px;
+}
+
 .imageContainer {
   width: fit-content;
   height: 400px;
@@ -74,4 +85,72 @@
   box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
     rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
     rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+
+@media screen and (max-width: 1377px){
+  .aboutContainer {
+    height: 500px;
+    margin-top: 140px;
+  }
+
+  .aboutExplanation {
+    padding: 50px 20% 50px 50px;
+  }
+  
+  .imageContainer {
+    right: -100px;
+    height: 350px;
+  }
+}
+
+@media screen and (max-width: 1175px){
+  .aboutContainer {
+    flex-direction: column;
+    height: unset;
+  }
+
+  .aboutExplanation {
+    padding: 50px;
+    width: 100%;
+    border-radius: 10px 10px 0px 0px;
+  }
+
+  .imageContainer {
+    display: none;
+  }
+
+  .aboutImage {
+    width: 100%;
+    border-radius: 0px 0px 10px 10px;
+    height: 200px;
+    border-top: none;
+    border-left: 2px solid var(--about-border);
+  }
+  
+  .aboutImage::before {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 850px){
+  .aboutContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 630px){
+  .aboutDescription {
+    font-size: medium;
+  }
+}
+
+@media screen and (max-width: 426px){
+  .aboutContainer {
+    width: 85%;
+  }
+
+  .aboutExplanation {
+    padding: 30px;
+  }
 }
