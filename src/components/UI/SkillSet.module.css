@@ -1,58 +1,102 @@
 .skillCard {
-  height: 100px;
-  width: 100%;
-  border-bottom: 2px solid var(--about-border);
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
-  cursor: pointer;
-  padding: 0px 50px;
+    height: 100px;
+    width: 100%;
+    border-bottom: 2px solid var(--about-border);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    transition: 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+    cursor: pointer;
+    padding: 0px 50px;
 }
 
 .skillCard:hover {
-  scale: 1.1;
-  background: var(--primary-inverted);
-  box-shadow: rgba(240, 46, 170, 0.4) 0px 5px, rgba(240, 46, 170, 0.3) 0px 10px,
-    rgba(240, 46, 170, 0.2) 0px 15px, rgba(240, 46, 170, 0.1) 0px 20px,
-    rgba(240, 46, 170, 0.05) 0px 25px;
-  border-radius: 10px;
-  color: var(--primary);
+    scale: 1.1;
+    background: var(--primary-inverted);
+    box-shadow: rgba(240, 46, 170, 0.4) 0px 5px,
+        rgba(240, 46, 170, 0.3) 0px 10px, rgba(240, 46, 170, 0.2) 0px 15px,
+        rgba(240, 46, 170, 0.1) 0px 20px, rgba(240, 46, 170, 0.05) 0px 25px;
+    border-radius: 10px;
+    color: var(--primary);
 }
 
 .expertBarContainer {
-  display: flex;
-  width: 20%;
-  height: 40px;
-  background: var(--primary-inverted);
-  margin: 0px 5px;
-  border-radius: 10px;
-  border: 2px solid var(--about-background);
-  /* overflow: hidden; */
+    display: flex;
+    width: 20%;
+    height: 40px;
+    background: var(--primary-inverted);
+    margin: 0px 5px;
+    border-radius: 10px;
+    border: 2px solid var(--about-background);
+    /* overflow: hidden; */
 }
 
 .expertBar {
-  background: var(--about-background);
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border-radius: 5px;
-  padding-left: 20px;
-  color: var(--primary-inverted);
-  font-weight: bold;
+    background: var(--about-background);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 5px;
+    padding-left: 20px;
+    color: var(--primary-inverted);
+    font-weight: bold;
 }
 
-.row1,
-.row2,
-.row4 {
-  width: 10%;
+.row1 {
+    font-size: 40px;
+    width: 10%;
 }
 
 .row2 {
-  font-size: 40px;
+    width: 30%;
 }
 
 .row3 {
-  width: 30%;
+    width: 20%;
+}
+
+@media screen and (max-width: 769px){
+  .skillCard {
+    padding: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .skillCard {
+    border: 2px solid var(--about-border);
+    border-radius: 10px;
+    background: var(--about-background);
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    height: unset;
+    width: unset;
+    padding: 20px 20px 60px 20px;
+    margin: 10px;
+    position: relative;
+  }
+
+  .row1, .row2, .row3 {
+    width: 100%;
+  }
+
+  .expertBarContainer {
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    width: 100%;
+    border-radius: 7.5px;
+    margin: 0px;
+  }
+
+  .expertBar {
+    border-radius: 4px 0px 0px 4px;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .row1 {
+    font-size: 50px;
+  }
 }

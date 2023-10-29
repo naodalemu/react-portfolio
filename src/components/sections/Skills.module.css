@@ -9,7 +9,6 @@
 .sectionTitle {
   margin-bottom: 20px;
   margin-top: 120px;
-  /* font-size: 40px; */
 }
 
 .skillSelector {
@@ -19,6 +18,7 @@
   overflow: hidden;
   margin-bottom: 50px;
   width: fit-content;
+  box-shadow: 4px 4px 2px 2px;
 }
 
 .frontSelector {
@@ -43,4 +43,37 @@
 .skillsWrapper {
   width: 100%;
   border-top: 2px solid var(--about-border);
+}
+
+@media screen and (max-width: 910px){
+  .skillContainer {
+    width: 80%;
+  }
+}
+
+@media screen and (max-width: 640px){
+  .devNDesSkills {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .skillsWrapper {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 460px){
+  .devNDesSkills {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media screen and (max-width: 375px){
+  .sectionTitle {
+    font-size: 25px;
+  }
+
+  .skillSelector {
+    scale: 0.9;
+  }
 }

@@ -3,6 +3,7 @@ import classes from "./Skills.module.css";
 import SkillSet from "../UI/SkillSet";
 import {
   faCss3,
+  faDev,
   faFigma,
   faHtml5,
   faJsSquare,
@@ -10,9 +11,12 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import {
   faAd,
+  faCode,
   faDrawPolygon,
   faImages,
+  faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 function Skills() {
   const [developmentActive, setDevelopmentActive] = useState(true);
@@ -32,7 +36,7 @@ function Skills() {
             setDesignActive(false);
           }}
         >
-          Developement
+         <FontAwesomeIcon icon={faCode} /> <span className={classes.hideDev}>Developement</span>
         </div>
         <div
           className={`${classes.backSelector} ${
@@ -43,12 +47,12 @@ function Skills() {
             setDevelopmentActive(false);
           }}
         >
-          Designing
+          <FontAwesomeIcon icon={faPaintBrush} /> <span className={classes.hideDes}>Designing</span>
         </div>
       </div>
       <div className={classes.skillsWrapper}>
         {developmentActive ? (
-          <div className={classes.devSkills}>
+          <div className={`${classes.devSkills} ${classes.devNDesSkills}`}>
             <SkillSet
               language={"HTML"}
               icon={faHtml5}
@@ -75,7 +79,7 @@ function Skills() {
             />
           </div>
         ) : (
-          <div className={classes.designSkills}>
+          <div className={`${classes.designSkills} ${classes.devNDesSkills}`}>
             <SkillSet
               language={"Figma"}
               icon={faFigma}

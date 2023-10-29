@@ -9,11 +9,11 @@ function SkillSet(props) {
     return (
         <div className={classes.skillCard}>
             {/* <p className={classes.row1}>{props.language}</p> */}
-            <h1 className={classes.row2}>
+            <h1 className={classes.row1}>
                 <FontAwesomeIcon icon={props.icon} />
             </h1>
-            <h2 className={classes.row3}>{props.language}</h2>
-            <h2 className={classes.row4}>{props.years}</h2>
+            <h2 className={classes.row2}>{props.language}</h2>
+            <h2 className={classes.row3}>{props.years}</h2>
             <div className={classes.expertBarContainer}>
                 <div
                     className={classes.expertBar}
