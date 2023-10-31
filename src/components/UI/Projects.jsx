@@ -8,7 +8,7 @@ function Projects(props) {
             <div className={classes.imageContainer} style={{background: `url(${props.image})`}}></div>
             <div className={classes.explanationContainer}>
                 <div className={classes.projectExplanation}>
-                    <h1 className={classes.projectName}>{props.name}</h1>
+                    <h2 className={classes.projectName}>{props.name}</h2>
                     <p className={classes.projectDesc}>{props.description}</p>
                 </div>
                 <div className={classes.projectAddons}>

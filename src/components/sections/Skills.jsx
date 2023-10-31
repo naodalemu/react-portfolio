@@ -3,7 +3,6 @@ import classes from "./Skills.module.css";
 import SkillSet from "../UI/SkillSet";
 import {
   faCss3,
-  faDev,
   faFigma,
   faHtml5,
   faJsSquare,

@@ -58,6 +58,8 @@ function Showcase() {
     
     return (
         <div className={classes.ShowcaseSection}>
+            <div id="showcase" className={classes.showRoom}></div>
+            <h1 className={classes.sectionName}>Showcase or Experience</h1>
             <div className={classes.showContainer}>
                         <Projects
                             name={currentShowcase.name}
@@ -68,14 +70,14 @@ function Showcase() {
                             liveServer={currentShowcase.liveServer}
                         />
                 <div className={classes.arrowContainer}>
-                    <div className={classes.toggleLeft} onClick={toggleLeft} style={index === 0 ? {color: "gray", border: "2px solid gray"} : null}>
+                    <button className={classes.toggleLeft} onClick={toggleLeft} style={index === 0 ? {color: "gray", border: "2px solid gray"} : null}>
                         <FontAwesomeIcon icon={faLeftLong} />
-                    </div>
-                    <div className={classes.toggleRight} onClick={toggleRight} style={index === projectData.length-1 ? {color: "gray", border: "2px solid gray"} : null}>
+                    </button>
+                    <button className={classes.toggleRight} onClick={toggleRight} style={index === projectData.length-1 ? {color: "gray", border: "2px solid gray"} : null}>
                         <FontAwesomeIcon icon={faRightLong} />
-                    </div>
+                    </button>
                     <div className={classes.statusBarContainer}>
-                        <div className={classes.statusBar} style={{background: "var(--primary-inverted)", width: `${(100 * index) / projectData.length}%`}}></div>
+                        <div className={classes.statusBar} style={{width: `${(100 * (index)) / (projectData.length-1)}%`}}></div>
                     </div>
                 </div>
             </div>
