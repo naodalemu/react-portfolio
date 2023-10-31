@@ -2,6 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./Showcase.module.css";
 import { faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
 import Projects from "../UI/Projects";
+import { useEffect, useState } from "react";
 
 function Showcase() {
     const projectData = [
@@ -26,31 +27,49 @@ function Showcase() {
             name: "Electric Billing Company Page",
             description:
                 "The electric billing thing is something I do not care about and I am listening to some african dude say I was cheated on.",
-            image: "Electric",
-            languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
+                image: "Electric",
+                languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
         }
     ];
+    
+    const [ index, setIndex ] = useState(0);
+    const [ currentShowcase, setCurrentShowcase ] = useState(projectData[index])
+    useEffect(() => {
+        setCurrentShowcase(projectData[index])
+    }, [index])
 
+    function toggleLeft() {
+        if (index > 0) {
+            setIndex(index => {
+                return index - 1
+            });
+        }
+    }
+    
+    function toggleRight() {
+        if (index < projectData.length-1) {
+            setIndex(index => {
+                return index + 1
+            });
+        }
+    }
+    
     return (
         <div className={classes.showContainer}>
-            <div className={classes.toggleLeft}>
+            <div className={classes.toggleLeft} onClick={toggleLeft} style={index === 0 ? {visibility: "hidden"} : {visibility: "visible"}}>
                 <FontAwesomeIcon icon={faLeftLong} />
             </div>
-            {projectData.map((project) => {
-                return (
                     <Projects
-                        name={project.name}
-                        description={project.description}
-                        image={project.image}
-                        languages={project.languages}
-                        githubLink={project.githubLink}
-                        liveServer={project.liveServer}
+                        name={currentShowcase.name}
+                        description={currentShowcase.description}
+                        image={currentShowcase.image}
+                        languages={currentShowcase.languages}
+                        githubLink={currentShowcase.githubLink}
+                        liveServer={currentShowcase.liveServer}
                     />
-                );
-            })}
-            <div className={classes.toggleRight}>
+            <div className={classes.toggleRight} onClick={toggleRight} style={index === projectData.length-1 ? {visibility: "hidden"} : {visibility: "visible"}}>
                 <FontAwesomeIcon icon={faRightLong} />
             </div>
         </div>
