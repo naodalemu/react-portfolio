@@ -9,7 +9,7 @@ function Showcase() {
         {
             name: "Quiz App",
             description: "This is by far the most dumb project of all time",
-            image: "src/assets/images/naod.png",
+            image: "src/assets/images/Showcase/WelcomePageMock.png",
             languages: ["HTML", "CSS", "React"],
             githubLink: "https://github.com/naodalemu/queez-app",
             liveServer: "https://quizee-three.vercel.app",
@@ -18,7 +18,7 @@ function Showcase() {
             name: "Library Landing Page",
             description:
                 "This was made for a library management system landing page which is made to engage users with statistical data and every other thing they need to know before they join",
-            image: "src/assets/images/darkDev.jpg",
+            image: "src/assets/images/Showcase/hero.png",
             languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
@@ -57,20 +57,27 @@ function Showcase() {
     }
     
     return (
-        <div className={classes.showContainer}>
-            <div className={classes.toggleLeft} onClick={toggleLeft} style={index === 0 ? {visibility: "hidden"} : {visibility: "visible"}}>
-                <FontAwesomeIcon icon={faLeftLong} />
-            </div>
-                    <Projects
-                        name={currentShowcase.name}
-                        description={currentShowcase.description}
-                        image={currentShowcase.image}
-                        languages={currentShowcase.languages}
-                        githubLink={currentShowcase.githubLink}
-                        liveServer={currentShowcase.liveServer}
-                    />
-            <div className={classes.toggleRight} onClick={toggleRight} style={index === projectData.length-1 ? {visibility: "hidden"} : {visibility: "visible"}}>
-                <FontAwesomeIcon icon={faRightLong} />
+        <div className={classes.ShowcaseSection}>
+            <div className={classes.showContainer}>
+                        <Projects
+                            name={currentShowcase.name}
+                            description={currentShowcase.description}
+                            image={currentShowcase.image}
+                            languages={currentShowcase.languages}
+                            githubLink={currentShowcase.githubLink}
+                            liveServer={currentShowcase.liveServer}
+                        />
+                <div className={classes.arrowContainer}>
+                    <div className={classes.toggleLeft} onClick={toggleLeft} style={index === 0 ? {color: "gray", border: "2px solid gray"} : null}>
+                        <FontAwesomeIcon icon={faLeftLong} />
+                    </div>
+                    <div className={classes.toggleRight} onClick={toggleRight} style={index === projectData.length-1 ? {color: "gray", border: "2px solid gray"} : null}>
+                        <FontAwesomeIcon icon={faRightLong} />
+                    </div>
+                    <div className={classes.statusBarContainer}>
+                        <div className={classes.statusBar} style={{background: "var(--primary-inverted)", width: `${(100 * index) / projectData.length}%`}}></div>
+                    </div>
+                </div>
             </div>
         </div>
     );

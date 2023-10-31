@@ -1,8 +1,13 @@
+.ShowcaseSection {
+    width: 75%;
+}
+
 .showContainer {
-    width: 80%;
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: center;
     transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    margin-bottom: 100px;
 }
 
 .toggleLeft, .toggleRight {
@@ -15,10 +20,24 @@
     padding: 10px;
     border-radius: 50%;
     cursor: pointer;
+    margin-right: 10px;
 }
 
-.toggleLeft:hover, .toggleRight:hover {
-    background: var(--primary-inverted);
-    color: var(--primary);
+.arrowContainer {
+    display: flex;
+    align-items: center;
+    padding: 0px 50px;
+    width: 100%;
 }
 
+.statusBarContainer {
+    width: 100%;
+    background: gray;
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.statusBar {
+    width: 50%;
+    height: 10px;
+}
