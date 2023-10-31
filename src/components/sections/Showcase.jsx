@@ -9,7 +9,7 @@ function Showcase() {
         {
             name: "Quiz App",
             description: "This is by far the most dumb project of all time",
-            image: "src/assets/images/Showcase/WelcomePageMock.png",
+            image: "src/assets/images/Showcase/ReactMockup.png",
             languages: ["HTML", "CSS", "React"],
             githubLink: "https://github.com/naodalemu/queez-app",
             liveServer: "https://quizee-three.vercel.app",
