@@ -9,7 +9,7 @@ function Showcase() {
         {
             name: "Quiz App",
             description: "This is by far the most dumb project of all time",
-            image: "Quiz",
+            image: "src/assets/images/naod.png",
             languages: ["HTML", "CSS", "React"],
             githubLink: "https://github.com/naodalemu/queez-app",
             liveServer: "https://quizee-three.vercel.app",
@@ -18,7 +18,7 @@ function Showcase() {
             name: "Library Landing Page",
             description:
                 "This was made for a library management system landing page which is made to engage users with statistical data and every other thing they need to know before they join",
-            image: "Library",
+            image: "src/assets/images/darkDev.jpg",
             languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
@@ -27,7 +27,7 @@ function Showcase() {
             name: "Electric Billing Company Page",
             description:
                 "The electric billing thing is something I do not care about and I am listening to some african dude say I was cheated on.",
-                image: "Electric",
+                image: "src/assets/suitcase.png",
                 languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
