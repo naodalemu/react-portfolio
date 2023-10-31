@@ -11,7 +11,7 @@
 }
 
 .imageContainer {
-    width: 30%;
+    width: 40%;
     height: 100%;
     background-position: center !important;
     background-size: cover !important;
@@ -19,7 +19,15 @@
 }
 
 .explanationContainer {
-    width: 70%;
+    width: 60%;
     height: 100%;
     padding: 20px;
+    background: var(--about-background);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.projectName {
+    padding-bottom: 10px;
 }
