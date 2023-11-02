@@ -11,7 +11,7 @@ function Showcase() {
     const projectData = [
         {
             name: "Quiz App",
-            description: "This is by far the most dumb project of all time",
+            description: "A quiz platform made with React which is a JavaScript library or a UI helper which works with JavaScript under the hood. It have an add question section and also it uses Firebase Realtime Database to store the question. It also have an online and offline indication to fetch the data from the database.",
             image: reactQuizImage,
             languages: ["HTML", "CSS", "React"],
             githubLink: "https://github.com/naodalemu/queez-app",
@@ -22,7 +22,7 @@ function Showcase() {
             description:
                 "This was made for a library management system landing page which is made to engage users with statistical data and every other thing they need to know before they join",
             image: libraryImage,
-            languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
+            languages: ["HTML", "CSS", "Chart.js"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
         },
@@ -31,7 +31,7 @@ function Showcase() {
             description:
                 "The electric billing thing is something I do not care about and I am listening to some african dude say I was cheated on.",
                 image: electricBill,
-                languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
+                languages: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/naodalemu/libray",
             liveServer: "https://bookoflibs.netlify.app",
         }

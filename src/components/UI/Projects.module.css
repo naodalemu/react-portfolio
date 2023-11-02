@@ -21,7 +21,7 @@
 .explanationContainer {
     width: 60%;
     height: 100%;
-    padding: 20px;
+    padding: 20px 30px;
     background: var(--about-background);
     display: flex;
     flex-direction: column;
@@ -30,4 +30,36 @@
 
 .projectName {
     padding-bottom: 10px;
+}
+
+.languageContainer {
+    display: flex;
+    justify-content: end;
+}
+
+.projectAddons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.projectLanguages {
+    margin-right: 10px;
+}
+
+.projectLink {
+    display: flex;
+    justify-content: end;
+}
+
+.githunLink, .liveServer {
+    display: flex;
+    font-size: 30px;
+    border: 2px solid var(--primary-inverted);
+    padding: 5px;
+    border-radius: 50%;
+}
+
+.githunLink {
+    margin-right: 10px;
 }

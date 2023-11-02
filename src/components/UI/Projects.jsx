@@ -1,8 +1,18 @@
 import classes from "./Projects.module.css";
 import Quiz from "../../assets/images/darkDev.jpg"
 import Library from "../../assets/images/naod.png"
+import TW from "./TextWrapper";
+import { useState } from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faGithub, faWeebly, faWeibo } from "@fortawesome/free-brands-svg-icons";
+import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function Projects(props) {
+    const [ languageIndex, setLanguageIndex ] = useState(0);
+    const language = props.languages.map(lang => {
+        return <div className={classes.projectLanguages}><TW>{lang}</TW></div>;
+    })
+
     return (
         <div className={classes.project}>
             <div className={classes.imageContainer} style={{background: `url(${props.image})`}}></div>
@@ -12,8 +22,13 @@ function Projects(props) {
                     <p className={classes.projectDesc}>{props.description}</p>
                 </div>
                 <div className={classes.projectAddons}>
-                    <div className={classes.projectLanguages}>{props.languages}</div>
-                    <div className={classes.projectLink}>{props.githubLink} {props.liveServer}</div>
+                    <div className={classes.languageContainer}>
+                        {language}
+                    </div>
+                    <div className={classes.projectLink}>
+                        <a href={props.githubLink} className={classes.githunLink}><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href={props.liveServer} className={classes.liveServer}><FontAwesomeIcon icon={faGlobe} /></a>
+                    </div>
                 </div>
             </div>
         </div>
