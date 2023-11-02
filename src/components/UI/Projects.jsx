@@ -1,6 +1,4 @@
 import classes from "./Projects.module.css";
-import Quiz from "../../assets/images/darkDev.jpg"
-import Library from "../../assets/images/naod.png"
 import TW from "./TextWrapper";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -8,7 +6,6 @@ import { faGithub, faWeebly, faWeibo } from "@fortawesome/free-brands-svg-icons"
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
 
 function Projects(props) {
-    const [ languageIndex, setLanguageIndex ] = useState(0);
     const language = props.languages.map(lang => {
         return <div className={classes.projectLanguages}><TW>{lang}</TW></div>;
     })
