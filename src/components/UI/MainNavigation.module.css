@@ -51,6 +51,7 @@
 
 .logo {
   background: var(--primary-inverted);
+  border: none;
   color: var(--primary);
   padding: 5px;
   display: flex;
