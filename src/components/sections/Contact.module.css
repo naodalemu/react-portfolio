@@ -1,8 +1,59 @@
 .contactSection {
     margin-bottom: 1000px;
+    width: 60%;
 }
 
 .contactMargin {
-    margin-bottom: 130px;
+    margin-bottom: 140px;
     margin-top: 10px;
+}
+
+.contactSectionName {
+    margin: 0px 0px 30px 0px;
+    text-align: center;
+}
+
+.contactContainer {
+    display: flex;
+    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    height: 350px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.firstContactInfo, .lastContactInfo {
+    display: flex;
+    flex-direction: column;
+    padding: 50px;
+    width: 50%;
+}
+
+.firstContactInfo {
+    justify-content: space-between;
+    background: var(--about-background);
+}
+
+.contactInput {
+    width: 100%;
+    padding: 10px;
+    font-size: large;
+    border: 2px solid var(--primary-inverted);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--primary-inverted);
+    outline: none;
+}
+
+.nameContainer, .emailContainer, .subjectContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.senderNameLabel, .senderEmailLabel, .messageSubjectLabel {
+    padding-bottom: 5px;
+}
+
+.lastContactInfo {
+    justify-content: space-between;
+    background: var(--primary-inverted);
 }
