@@ -31,7 +31,7 @@ function About() {
           web developement more than anything but I am not just a programmer, I
           create amazing UI and UX as a website designer too. With skills of
           both <TW fa={faFigma}> Figma</TW> and <TW fa={faAd}> Adobe XD</TW> I
-          am really proud to say that I have spent{" "}
+          am proud to say that I have spent{" "}
           <FontAwesomeIcon icon={fa3} />
           <FontAwesomeIcon icon={faPlus} /> years designing websites.
         </p>
