@@ -74,28 +74,30 @@ function Showcase() {
                     liveServer={currentShowcase.liveServer}
                 />
                 <div className={classes.arrowContainer}>
-                    <button
-                        className={classes.toggleLeft}
-                        onClick={toggleLeft}
-                        style={
-                            index === 0
-                                ? { color: "gray", border: "2px solid gray" }
-                                : null
-                        }
-                    >
-                        <FontAwesomeIcon icon={faLeftLong} />
-                    </button>
-                    <button
-                        className={classes.toggleRight}
-                        onClick={toggleRight}
-                        style={
-                            index === projectData.length - 1
-                                ? { color: "gray", border: "2px solid gray" }
-                                : null
-                        }
-                    >
-                        <FontAwesomeIcon icon={faRightLong} />
-                    </button>
+                    <div className={classes.leftNRightContainer}>
+                        <button
+                            className={classes.toggleLeft}
+                            onClick={toggleLeft}
+                            style={
+                                index === 0
+                                    ? { color: "gray", border: "2px solid gray" }
+                                    : null
+                            }
+                        >
+                            <FontAwesomeIcon icon={faLeftLong} />
+                        </button>
+                        <button
+                            className={classes.toggleRight}
+                            onClick={toggleRight}
+                            style={
+                                index === projectData.length - 1
+                                    ? { color: "gray", border: "2px solid gray" }
+                                    : null
+                            }
+                        >
+                            <FontAwesomeIcon icon={faRightLong} />
+                        </button>
+                    </div>
                     <div className={classes.statusBarContainer}>
                         <div
                             className={classes.statusBar}

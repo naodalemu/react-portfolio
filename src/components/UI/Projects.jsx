@@ -23,8 +23,8 @@ function Projects(props) {
                         {language}
                     </div>
                     <div className={classes.projectLink}>
-                        <a href={props.githubLink} className={classes.githunLink}><FontAwesomeIcon icon={faGithub} /></a>
-                        <a href={props.liveServer} className={classes.liveServer}><FontAwesomeIcon icon={faGlobe} /></a>
+                        <a href={props.githubLink} className={classes.githunLink} target="blank"><FontAwesomeIcon icon={faGithub} /></a>
+                        <a href={props.liveServer} className={classes.liveServer} target="blank"><FontAwesomeIcon icon={faGlobe} /></a>
                     </div>
                 </div>
             </div>

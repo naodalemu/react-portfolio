@@ -1,6 +1,6 @@
 .project {
     margin: 20px 0px;
-    height: 400px;
+    height: 350px;
     width: 100%;
     display: flex;
     align-items: center;
@@ -11,7 +11,7 @@
 }
 
 .imageContainer {
-    width: 40%;
+    width: 35%;
     height: 100%;
     background-position: center !important;
     background-size: cover !important;
@@ -19,7 +19,7 @@
 }
 
 .explanationContainer {
-    width: 60%;
+    width: 65%;
     height: 100%;
     padding: 20px 30px;
     background: var(--about-background);
@@ -34,7 +34,6 @@
 
 .languageContainer {
     display: flex;
-    justify-content: end;
 }
 
 .projectAddons {
@@ -49,7 +48,6 @@
 
 .projectLink {
     display: flex;
-    justify-content: end;
 }
 
 .githunLink, .liveServer {
@@ -62,4 +60,82 @@
 
 .githunLink {
     margin-right: 10px;
+}
+
+@media screen and (max-width: 1100px) {
+    .projectAddons {
+        flex-direction: column;
+        align-items: start;
+    }
+
+    .projectLink {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 977px) {
+    .project {
+        height: 430px;
+    }
+
+    .imageContainer {
+        width: 40%;
+    }
+
+    .explanationContainer {
+        width: 60%;
+    }
+
+    .languageContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 30px;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .project {
+        height: unset;
+        flex-direction: column;
+    }
+
+    .imageContainer {
+        height: 400px;
+        width: 100%;
+        /* background-attachment: fixed !important; */
+    }
+
+    .explanationContainer {
+        height: fit-content;
+        width: 100%;
+    }
+
+    .projectDesc {
+        padding-bottom: 20px;
+    }
+
+    .languageContainer {
+        display: flex;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .imageContainer {
+        height: 300px;
+    }
+}
+
+
+@media screen and (max-width: 500px) {
+    .languageContainer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-auto-rows: 30px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .imageContainer {
+        height: 200px;
+    }
 }
