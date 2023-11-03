@@ -1,5 +1,6 @@
 import MainNavigation from "../UI/MainNavigation";
 import About from "../sections/About";
+import Contact from "../sections/Contact";
 import Hero from "../sections/Hero";
 import Showcase from "../sections/Showcase";
 import Skills from "../sections/Skills";
@@ -13,6 +14,7 @@ function Layout() {
       <About />
       <Skills />
       <Showcase />
+      <Contact />
     </div>
   );
 }

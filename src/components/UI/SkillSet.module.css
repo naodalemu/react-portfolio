@@ -56,9 +56,21 @@
     width: 20%;
 }
 
+@media screen and (max-width: 1130px) {
+  .row2 {
+    width: 40%;
+  }
+}
+
 @media screen and (max-width: 769px){
   .skillCard {
     padding: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 772px){
+  .row2 {
+    width: 46%;
   }
 }
 
