@@ -1,5 +1,5 @@
 .contactSection {
-    margin-bottom: 1000px;
+    margin-bottom: 300px;
     width: 60%;
 }
 
@@ -15,7 +15,7 @@
 
 .contactContainer {
     display: flex;
-    transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s;
+    /* transition: cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s; */
     height: 350px;
     border-radius: 10px;
     overflow: hidden;
@@ -56,4 +56,32 @@
 .lastContactInfo {
     justify-content: space-between;
     background: var(--primary-inverted);
+}
+
+.contactMessage {
+    height: 80%;
+    width: 100%;
+    font-size: medium;
+    padding: 10px;
+    border: 2px solid var(--primary);
+    border-radius: 5px;
+    background: transparent;
+    color: var(--primary);
+    outline: none;
+    resize: none;
+}
+
+.contactButton {
+    background: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 10px 50px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    color: var(--primary-inverted);
+}
+
+.contactButton:active {
+    background: transparent;
+    color: var(--primary);
 }

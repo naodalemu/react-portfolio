@@ -1,13 +1,10 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import classes from "./SkillSet.module.css";
-import {
-    faArrowAltCircleRight,
-    faGreaterThan,
-} from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 function SkillSet(props) {
     return (
-        <div className={classes.skillCard}>
+        <motion.div className={classes.skillCard} initial={{ y: 50, opacity: 0.5 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 0.3 }}>
             {/* <p className={classes.row1}>{props.language}</p> */}
             <h1 className={classes.row1}>
                 <FontAwesomeIcon icon={props.icon} />
@@ -20,7 +17,7 @@ function SkillSet(props) {
                     style={{ width: `${props.percent}` }}
                 ></div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 
