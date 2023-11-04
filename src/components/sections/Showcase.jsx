@@ -15,7 +15,7 @@ function Showcase() {
                 "A quiz platform made with React which is a JavaScript library. It have an add question section and also it uses Firebase Realtime Database to store the question. It also have an online and offline indication to fetch the data from the database. This application can be scalled to however much needed and we can add categories too. Take a look using the globe icon below.",
             image: reactQuizImage,
             languages: ["HTML", "CSS", "React"],
-            githubLink: "https://github.com/naodalemu/queez-app",
+            githubLink: "https://github.com/naodalemu/quizee",
             liveServer: "https://quizee-three.vercel.app",
         },
         {
@@ -24,7 +24,7 @@ function Showcase() {
                 "This is the front end of a library management system I built for my internship. Our clients wanted a good looking and elegant page to give users awareness of their library on the first page so that they can Sign Up with most important informations in mind. The website consists of a full landing page with motivation video for readers at the footer and with a login page for both admin and member. It's responsive in its design and can be for any screen. Take a look by clicking the globe icon below.",
             image: libraryImage,
             languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
-            githubLink: "https://github.com/naodalemu/libray",
+            githubLink: "https://github.com/naodalemu/BooksLibrary",
             liveServer: "https://bookoflibs.netlify.app",
         },
         {
@@ -33,8 +33,8 @@ function Showcase() {
                 "An elegant looking and a fully functional website for an electric billing company to handle payment and user interaction. Unfortunately this page can not be hosted because of the backend code but you can see the images and the looks of it on my upwork profile by clicking the globe icon below.",
             image: electricBill,
             languages: ["HTML", "CSS", "JavaScript"],
-            githubLink: "https://github.com/naodalemu/libray",
-            liveServer: "https://bookoflibs.netlify.app",
+            githubLink: "https://github.com/naodalemu/Electric-billing-system",
+            liveServer: "#",
         },
     ];
 
