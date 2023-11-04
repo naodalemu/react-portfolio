@@ -1,5 +1,5 @@
 .contactSection {
-    margin-bottom: 300px;
+    margin-bottom: 200px;
     width: 60%;
 }
 
@@ -85,4 +85,62 @@
 .contactButton:active {
     background: transparent;
     color: var(--primary);
+}
+
+/* Loading section (a quick fix so not recommended to write code like this) */
+
+.message {
+    width: fit-content;
+    margin-top: 30px;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.messageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+@media screen and (max-width: 1340px) {
+    .contactSection {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 1144px) {
+    .contactSection {
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 910px) {
+    .contactContainer {
+        flex-direction: column;
+        height: unset;
+    }
+
+    .firstContactInfo, .lastContactInfo {
+        width: 100%;
+    }
+
+    .contactMessage {
+        height: 200px;
+        margin-bottom: 10px;
+    }
+
+    .contactInput {
+        margin-bottom: 20px;
+    }
+    
+    .firstContactInfo div:last-child .contactInput {
+        margin-bottom: 0px;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .firstContactInfo, .lastContactInfo {
+        padding: 30px;
+    }
 }

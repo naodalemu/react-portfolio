@@ -13,12 +13,17 @@ function Contact() {
     const contactMessageRef = useRef()
     const [ successModal, setSuccessModal ] = useState(false);
     const [ FailedModal, setFailedModal ] = useState(false);
+    const [ loading, setLoading ] = useState(false)
 
     const sendEmail = (e) => {
         e.preventDefault();
 
+        setSuccessModal(false)
+        setFailedModal(false)
+        setLoading(true)
         emailjs.sendForm('service_3z9vgtc', 'template_6l7ma3f', form.current, 'ai0ySokHar3c5tE5p')
         .then((result) => {
+            setLoading(false)
             console.log(result.text);
             senderNameRef.current.value = "";
             senderEmailRef.current.value = "";
@@ -28,14 +33,15 @@ function Contact() {
             setFailedModal(false)
             setTimeout(() => {
                 setSuccessModal(false);
-            }, 5000);
+            }, 3000);
         }, (error) => {
+            setLoading(false)
             console.log(error.text);
             setFailedModal(true)
             setSuccessModal(false)
             setTimeout(() => {
                 setFailedModal(false);
-            }, 5000);
+            }, 3000);
         });
     };
 
@@ -63,6 +69,7 @@ function Contact() {
                     <button className={classes.contactButton} type="submit">Send</button>
                 </div>
             </motion.form>
+            {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
             {successModal ? <SuccessfulEmail /> : null}
             {FailedModal ? <FailedEmail /> : null}
         </div>
