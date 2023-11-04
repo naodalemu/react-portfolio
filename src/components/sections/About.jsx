@@ -17,10 +17,11 @@ import {
 } from "@fortawesome/free-brands-svg-icons";
 import developer from "../../assets/images/darkDev.jpg";
 import { faArrowAltCircleRight } from "@fortawesome/free-regular-svg-icons";
+import { motion } from "framer-motion";
 
 function About() {
   return (
-    <div className={classes.aboutContainer}>
+    <motion.div className={classes.aboutContainer} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
       <div className={classes.aboutExplanation}>
         <h1 className={classes.aboutTitle}>About Me</h1>
         <p className={classes.aboutDescription}>
@@ -49,7 +50,7 @@ function About() {
           <img src={developer} className={classes.image} />
         </div>
       </div>
-    </div>
+    </motion.div>
   );
 }
 

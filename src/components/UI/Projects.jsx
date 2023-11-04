@@ -4,6 +4,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faGithub, faWeebly, faWeibo } from "@fortawesome/free-brands-svg-icons";
 import { faGlobe } from "@fortawesome/free-solid-svg-icons";
+import { motion } from "framer-motion";
 
 function Projects(props) {
     const language = props.languages.map(lang => {
@@ -11,7 +12,7 @@ function Projects(props) {
     })
 
     return (
-        <div className={classes.project}>
+        <motion.div className={classes.project} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
             <div className={classes.imageContainer} style={{background: `url(${props.image})`}}></div>
             <div className={classes.explanationContainer}>
                 <div className={classes.projectExplanation}>
@@ -28,7 +29,7 @@ function Projects(props) {
                     </div>
                 </div>
             </div>
-        </div>
+        </motion.div>
     );
 }
 

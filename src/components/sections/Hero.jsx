@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import classes from "./Hero.module.css";
 import naod from "../../assets/images/naod.png";
@@ -16,8 +17,8 @@ function Hero() {
   return (
     <div className={classes.container} id="home">
       <div className={classes.textContainer}>
-        <h1 className={classes.myName}>Hi, I Am Naod</h1>
-        <h2 className={classes.myDescription}>
+        <motion.h1 className={classes.myName} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 1.5 }}>Hi, I Am Naod</motion.h1>
+        <motion.h2 className={classes.myDescription} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 1 }}>
           A Front-End Web{" "}
           {timeIs.getSeconds() % 2 === 0 ? (
             <div className={classes.designer}>
@@ -28,7 +29,7 @@ function Hero() {
               <p className={classes.developerText}>Developer</p>
             </div>
           )}
-        </h2>
+        </motion.h2>
       </div>
       <div className={classes.imageContainer}>
         <img src={naod} className={classes.myImage} />

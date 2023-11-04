@@ -6,6 +6,7 @@ import { useEffect, useState } from "react";
 import reactQuizImage from "../../assets/images/Showcase/ReactMockup.png";
 import libraryImage from "../../assets/images/Showcase/hero.png";
 import electricBill from "../../assets/images/Showcase/ElectricBill.png";
+import { motion } from "framer-motion";
 
 function Showcase() {
     const projectData = [
@@ -34,7 +35,7 @@ function Showcase() {
             image: electricBill,
             languages: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/naodalemu/Electric-billing-system",
-            liveServer: "#",
+            liveServer: "",
         },
     ];
 
@@ -73,7 +74,7 @@ function Showcase() {
                     githubLink={currentShowcase.githubLink}
                     liveServer={currentShowcase.liveServer}
                 />
-                <div className={classes.arrowContainer}>
+                <motion.div className={classes.arrowContainer} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                     <div className={classes.leftNRightContainer}>
                         <button
                             className={classes.toggleLeft}
@@ -108,7 +109,7 @@ function Showcase() {
                             }}
                         ></div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
