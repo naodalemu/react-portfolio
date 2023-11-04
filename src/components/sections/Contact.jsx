@@ -6,7 +6,7 @@ function Contact() {
         <div className={classes.contactSection}>
             <div id="contact" className={classes.contactMargin}></div>
             <h1 className={classes.contactSectionName}>Contact Me</h1>
-            <motion.form className={classes.contactContainer} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 0.5 }}>
+            <motion.form className={classes.contactContainer} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
                 <div className={classes.firstContactInfo}>
                     <div className={classes.nameContainer}>
                         <label htmlFor="senderName" className={classes.senderNameLabel}>Full Name</label>
