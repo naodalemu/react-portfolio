@@ -1,0 +1,14 @@
+.message {
+    width: fit-content;
+    margin-top: 30px;
+    font-size: 16px;
+    border: 2px solid var(--primary-inverted);
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.messageContainer {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
