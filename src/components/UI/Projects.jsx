@@ -12,7 +12,7 @@ function Projects(props) {
     })
 
     return (
-        <motion.div className={classes.project} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+        <div className={classes.project}>
             <div className={classes.imageContainer} style={{background: `url(${props.image})`}}></div>
             <div className={classes.explanationContainer}>
                 <div className={classes.projectExplanation}>
@@ -29,7 +29,7 @@ function Projects(props) {
                     </div>
                 </div>
             </div>
-        </motion.div>
+        </div>
     );
 }
 

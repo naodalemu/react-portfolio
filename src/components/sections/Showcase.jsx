@@ -64,8 +64,8 @@ function Showcase() {
     return (
         <div className={classes.ShowcaseSection}>
             <div id="showcase" className={classes.showRoom}></div>
-            <h1 className={classes.sectionName}>Showcase or Experience</h1>
-            <div className={classes.showContainer}>
+            <motion.h1 className={classes.sectionName} initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }} >Showcase or Experience</motion.h1>
+            <motion.div className={classes.showContainer} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} transition={{ duration: 0.5 }}>
                 <Projects
                     name={currentShowcase.name}
                     description={currentShowcase.description}
@@ -74,7 +74,7 @@ function Showcase() {
                     githubLink={currentShowcase.githubLink}
                     liveServer={currentShowcase.liveServer}
                 />
-                <motion.div className={classes.arrowContainer} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+                <motion.div className={classes.arrowContainer}>
                     <div className={classes.leftNRightContainer}>
                         <button
                             className={classes.toggleLeft}
@@ -110,7 +110,7 @@ function Showcase() {
                         ></div>
                     </div>
                 </motion.div>
-            </div>
+            </motion.div>
         </div>
     );
 }

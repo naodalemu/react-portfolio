@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 
 function About() {
   return (
-    <motion.div className={classes.aboutContainer} initial={{ y:100, opacity: 0 }} whileInView={{ y:0, opacity: 1  }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+    <motion.div className={classes.aboutContainer} initial={{ x:100, opacity: 0 }}  whileInView={{ x:0, opacity: 1  }} transition={{ duration: 0.5, ease: "easeInOut" }}>
       <div className={classes.aboutExplanation}>
         <h1 className={classes.aboutTitle}>About Me</h1>
         <p className={classes.aboutDescription}>

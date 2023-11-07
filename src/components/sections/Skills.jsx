@@ -16,6 +16,7 @@ import {
   faPaintBrush,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { motion } from "framer-motion";
 
 function Skills() {
   const [developmentActive, setDevelopmentActive] = useState(true);
@@ -24,7 +25,7 @@ function Skills() {
   return (
     <div className={classes.skillContainer}>
       <div id="skills"></div>
-      <h1 className={classes.sectionTitle}>Skills and Expertise</h1>
+      <motion.h1 className={classes.sectionTitle} initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }} >Skills and Expertise</motion.h1>
       <div className={classes.skillSelector}>
         <div
           className={`${classes.frontSelector} ${

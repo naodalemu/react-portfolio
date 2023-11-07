@@ -48,8 +48,8 @@ function Contact() {
     return (
         <div className={classes.contactSection}>
             <div id="contact" className={classes.contactMargin}></div>
-            <h1 className={classes.contactSectionName}>Contact Me</h1>
-            <motion.form ref={form} className={classes.contactContainer} onSubmit={sendEmail} initial={{ y: 50, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ duration: 0.5 }}>
+            <motion.h1 className={classes.contactSectionName} initial={{ scale: 0 }} whileInView={{ scale: 1 }} transition={{ duration: 0.5 }} >Contact Me</motion.h1>
+            <motion.form ref={form} className={classes.contactContainer} onSubmit={sendEmail} initial={{ y: 100, opacity: 0 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
                 <div className={classes.firstContactInfo}>
                     <div className={classes.nameContainer}>
                         <label htmlFor="senderName" className={classes.senderNameLabel}>Full Name</label>

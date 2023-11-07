@@ -17,8 +17,8 @@ function Hero() {
   return (
     <div className={classes.container} id="home">
       <div className={classes.textContainer}>
-        <motion.h1 className={classes.myName} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 1.5 }}>Hi, I Am Naod</motion.h1>
-        <motion.h2 className={classes.myDescription} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 1 }}>
+        <motion.h1 className={classes.myName} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 1 }}>Hi, I Am Naod</motion.h1>
+        <motion.h2 className={classes.myDescription} initial={{ y: 50, opacity: 0.5 }} animate={{ y: 0, opacity: 1 }} viewport={{ once: true }} transition={{ ease: "easeInOut", duration: 0.5 }}>
           A Front-End Web{" "}
           {timeIs.getSeconds() % 2 === 0 ? (
             <div className={classes.designer}>
