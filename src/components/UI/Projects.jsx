@@ -12,7 +12,7 @@ function Projects(props) {
     })
 
     return (
-        <div className={classes.project}>
+        <div className={classes.project} key={props.id}>
             <div className={classes.imageContainer} style={{background: `url(${props.image})`}}></div>
             <div className={classes.explanationContainer}>
                 <div className={classes.projectExplanation}>

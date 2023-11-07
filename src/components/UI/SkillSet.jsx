@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 
 function SkillSet(props) {
     return (
-        <motion.div className={classes.skillCard} initial={{ y: 100, opacity: 0.5 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.3 }}>
+        <motion.div className={classes.skillCard} initial={{ y: 100, opacity: 0.5 }} whileInView={{ y: 0, opacity: 1 }} transition={{ duration: 0.5 }}>
             {/* <p className={classes.row1}>{props.language}</p> */}
             <h1 className={classes.row1}>
                 <FontAwesomeIcon icon={props.icon} />

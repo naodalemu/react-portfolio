@@ -4,6 +4,8 @@ import { motion } from "framer-motion";
 import classes from "./Contact.module.css"
 import FailedEmail from '../UI/FailedEmail';
 import SuccessfulEmail from '../UI/SuccessfulEmail';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faDiscord, faFacebook, faInstagram, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 
 function Contact() {
     const form = useRef();
@@ -11,9 +13,11 @@ function Contact() {
     const senderEmailRef = useRef()
     const messageSubjectRef = useRef()
     const contactMessageRef = useRef()
+    const contactList = useRef()
     const [ successModal, setSuccessModal ] = useState(false);
     const [ FailedModal, setFailedModal ] = useState(false);
     const [ loading, setLoading ] = useState(false)
+    const [ contactListMargin, setContactListMargin ] = useState();
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -29,6 +33,7 @@ function Contact() {
             senderEmailRef.current.value = "";
             messageSubjectRef.current.value = "";
             contactMessageRef.current.value = "";
+            contactList
             setSuccessModal(true)
             setFailedModal(false)
             setTimeout(() => {
@@ -67,11 +72,33 @@ function Contact() {
                 <div className={classes.lastContactInfo}>
                     <textarea id="contactMessage" ref={contactMessageRef} className={classes.contactMessage} name="contactMessage" placeholder="Write your message here..." required></textarea>
                     <button className={classes.contactButton} type="submit">Send</button>
+                    {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
+                    {successModal ? <SuccessfulEmail /> : null}
+                    {FailedModal ? <FailedEmail /> : null}
                 </div>
             </motion.form>
-            {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
-            {successModal ? <SuccessfulEmail /> : null}
-            {FailedModal ? <FailedEmail /> : null}
+            <div className={classes.contactLinksContainer}>
+                <ul className={classes.contactLinks} ref={contactList}>
+                    <a href="https://t.me/naod_alemu">
+                        <motion.li className={`${classes.contactLink} ${classes.telegram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.1 }}><FontAwesomeIcon icon={faTelegram} /></motion.li>
+                    </a>
+                    <a href="">
+                        <motion.li className={`${classes.contactLink} ${classes.twitter}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.2 }}><FontAwesomeIcon icon={faTwitter} /></motion.li>
+                    </a>
+                    <a href="">
+                        <motion.li className={`${classes.contactLink} ${classes.whatsApp}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.3 }}><FontAwesomeIcon icon={faWhatsapp} /></motion.li>
+                    </a>
+                    <a href="">
+                        <motion.li className={`${classes.contactLink} ${classes.UpWork}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.4 }}><FontAwesomeIcon icon={faFacebook} /></motion.li>
+                    </a>
+                    <a href="">
+                        <motion.li className={`${classes.contactLink} ${classes.instagram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.5 }}><FontAwesomeIcon icon={faInstagram} /></motion.li>
+                    </a>
+                    <a href="">
+                        <motion.li className={`${classes.contactLink} ${classes.discord}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.5 }}><FontAwesomeIcon icon={faDiscord} /></motion.li>
+                    </a>
+                </ul>
+            </div>
         </div>
     )
 }

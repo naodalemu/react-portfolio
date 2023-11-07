@@ -1,6 +1,7 @@
 .contactSection {
-    margin-bottom: 200px;
+    margin-bottom: 100px;
     width: 60%;
+    position: relative;
 }
 
 .contactMargin {
@@ -57,6 +58,8 @@
 .lastContactInfo {
     justify-content: space-between;
     background: var(--primary-inverted);
+    position: relative;
+    align-items: center;
 }
 
 .contactMessage {
@@ -80,6 +83,7 @@
     font-weight: bold;
     cursor: pointer;
     color: var(--primary-inverted);
+    width: 100%;
 }
 
 .contactButton:active {
@@ -91,8 +95,8 @@
 
 .message {
     width: fit-content;
-    margin-top: 30px;
-    font-size: 20px;
+    margin-top: 10px;
+    font-size: small;
     padding: 10px 20px;
     border-radius: 5px;
 }
@@ -101,6 +105,28 @@
     width: 100%;
     display: flex;
     justify-content: center;
+    position: absolute;
+    bottom: 20px;
+}
+
+/* Contact link section */
+
+.contactLinksContainer {
+    margin-top: 50px;
+}
+
+.contactLinks {
+    display: flex;
+    justify-content: space-around;
+}
+
+.contactLink{
+    list-style: none;
+    font-size: xx-large;
+}
+
+.contactLinksContainerActive {
+    margin-top: 100px;
 }
 
 @media screen and (max-width: 1340px) {
@@ -139,8 +165,27 @@
     }
 }
 
+@media screen and (max-width: 525px) {
+    .contactLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        justify-items: center;
+    }
+}
+
 @media screen and (max-width: 425px) {
     .firstContactInfo, .lastContactInfo {
         padding: 30px;
+    }
+}
+
+@media screen and (max-width: 370px) {
+    .contactLinks {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        row-gap: 20px;
+        justify-items: center;
+        padding: 20px;
     }
 }
