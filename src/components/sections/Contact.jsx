@@ -6,6 +6,7 @@ import FailedEmail from '../UI/FailedEmail';
 import SuccessfulEmail from '../UI/SuccessfulEmail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faDiscord, faFacebook, faInstagram, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import upwork from "../../assets/1929180_upwork_icon.svg"
 
 function Contact() {
     const form = useRef();
@@ -80,22 +81,22 @@ function Contact() {
             <div className={classes.contactLinksContainer}>
                 <ul className={classes.contactLinks} ref={contactList}>
                     <a href="https://t.me/naod_alemu">
-                        <motion.li className={`${classes.contactLink} ${classes.telegram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.1 }}><FontAwesomeIcon icon={faTelegram} /></motion.li>
+                        <motion.li className={`${classes.contactLink} ${classes.telegram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.1 }}><FontAwesomeIcon icon={faTelegram} /></motion.li>
+                    </a>
+                    <a href="https://www.upwork.com/freelancers/naodalemu">
+                        <motion.li  style={{ width: "32px", position: "relative" }} className={`${classes.contactLink} ${classes.twitter}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.2 }}><img src={upwork} style={{ height: "45px", position: "absolute", top: "-6px", left: "-6px" }} ></img></motion.li>
                     </a>
                     <a href="">
-                        <motion.li className={`${classes.contactLink} ${classes.twitter}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.2 }}><FontAwesomeIcon icon={faTwitter} /></motion.li>
+                        <motion.li className={`${classes.contactLink} ${classes.whatsApp}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.3 }}><FontAwesomeIcon icon={faTwitter} /></motion.li>
                     </a>
                     <a href="">
-                        <motion.li className={`${classes.contactLink} ${classes.whatsApp}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.3 }}><FontAwesomeIcon icon={faWhatsapp} /></motion.li>
+                        <motion.li className={`${classes.contactLink} ${classes.UpWork}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.4 }}><FontAwesomeIcon icon={faWhatsapp} /></motion.li>
                     </a>
                     <a href="">
-                        <motion.li className={`${classes.contactLink} ${classes.UpWork}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.4 }}><FontAwesomeIcon icon={faFacebook} /></motion.li>
+                        <motion.li className={`${classes.contactLink} ${classes.instagram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.5 }}><FontAwesomeIcon icon={faInstagram} /></motion.li>
                     </a>
                     <a href="">
-                        <motion.li className={`${classes.contactLink} ${classes.instagram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.5 }}><FontAwesomeIcon icon={faInstagram} /></motion.li>
-                    </a>
-                    <a href="">
-                        <motion.li className={`${classes.contactLink} ${classes.discord}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 1, delay: 0.5 }}><FontAwesomeIcon icon={faDiscord} /></motion.li>
+                        <motion.li className={`${classes.contactLink} ${classes.discord}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.5 }}><FontAwesomeIcon icon={faDiscord} /></motion.li>
                     </a>
                 </ul>
             </div>
