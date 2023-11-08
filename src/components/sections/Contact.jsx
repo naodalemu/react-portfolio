@@ -18,7 +18,6 @@ function Contact() {
     const [ successModal, setSuccessModal ] = useState(false);
     const [ FailedModal, setFailedModal ] = useState(false);
     const [ loading, setLoading ] = useState(false)
-    const [ contactListMargin, setContactListMargin ] = useState();
 
     const sendEmail = (e) => {
         e.preventDefault();
@@ -83,7 +82,7 @@ function Contact() {
                     <a href="https://t.me/naod_alemu" target="_blank">
                         <motion.li className={`${classes.contactLink} ${classes.telegram}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.1 }}><FontAwesomeIcon icon={faTelegram} /></motion.li>
                     </a>
-                    <a href="https://www.upwork.com/freelancers/naodalemu" target="_blank">
+                    <a href="https://www.upwork.com/freelancers/~01cb9ac80cc3e1114e" target="_blank">
                         <motion.li  style={{ width: "32px", position: "relative" }} className={`${classes.contactLink} ${classes.UpWork}`} initial={{ opacity:0, x:100 }} whileInView={{ opacity: 1, x:0 }} transition={{ duration: 0.5, delay: 0.2 }}><img src={upwork} style={{ height: "45px", position: "absolute", top: "-6px", left: "-6px" }} /></motion.li>
                     </a>
                     <a href="https://twitter.com/Hell_o_worlld" target="_blank">
