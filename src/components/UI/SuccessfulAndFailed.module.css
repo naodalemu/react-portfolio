@@ -4,7 +4,7 @@
     font-size: small;
     border-radius: 3px;
     text-align: center;
-    color: black;
+    color: var(--primary-black);
 }
 
 .messageContainer {
