@@ -1,7 +1,7 @@
 .message {
     width: fit-content;
     margin-top: 10px;
-    font-size: small;
+    font-size: 14px;
     border-radius: 3px;
     text-align: center;
     color: var(--primary-black);
