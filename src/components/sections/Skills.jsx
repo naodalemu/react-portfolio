@@ -83,13 +83,13 @@ function Skills() {
             <SkillSet
               language={"Figma"}
               icon={faFigma}
-              years={"4 years"}
+              years={"1 year"}
               percent={"80%"}
             />
             <SkillSet
               language={"Adobe XD"}
               icon={faAd}
-              years={"4 years"}
+              years={"3 years"}
               percent={"80%"}
             />
             <SkillSet
