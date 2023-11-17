@@ -2,10 +2,8 @@ import React, { useRef, useState } from 'react';
 import emailjs from '@emailjs/browser';
 import { motion } from "framer-motion";
 import classes from "./Contact.module.css"
-import FailedEmail from '../UI/FailedEmail';
-import SuccessfulEmail from '../UI/SuccessfulEmail';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faDiscord, faFacebook, faInstagram, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faDiscord, faInstagram, faTelegram, faTwitter, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
 import upwork from "../../assets/1929180_upwork_icon.svg"
 
 function Contact() {
@@ -73,8 +71,8 @@ function Contact() {
                     <textarea id="contactMessage" ref={contactMessageRef} className={classes.contactMessage} name="contactMessage" placeholder="Write your message here..." required></textarea>
                     <button className={classes.contactButton} type="submit">Send</button>
                     {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
-                    {successModal ? <SuccessfulEmail /> : null}
-                    {FailedModal ? <FailedEmail /> : null}
+                    {successModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "green" }}>Successfully Sent</div></div> : null}
+                    {!FailedModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "firebrick" }}>Failed! Please check your internet connection</div></div> : null}
                 </div>
             </motion.form>
             <div className={classes.contactLinksContainer}>
