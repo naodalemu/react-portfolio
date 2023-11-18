@@ -71,8 +71,8 @@ function Contact() {
                     <textarea id="contactMessage" ref={contactMessageRef} className={classes.contactMessage} name="contactMessage" placeholder="Write your message here..." required></textarea>
                     <button className={classes.contactButton} type="submit">Send</button>
                     {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
-                    {successModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "green" }}>Successfully Sent</div></div> : null}
-                    {FailedModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "firebrick" }}>Failed! Please check your internet connection</div></div> : null}
+                    {!successModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "green" }}>Successfully Sent</div></div> : null}
+                    {FailedModal ? <div className={`${classes.messageContainer} ${classes.failedMessageContainer}`}><div className={classes.message} style={{ color: "firebrick" }}>Failed! Please check your internet connection</div></div> : null}
                 </div>
             </motion.form>
             <div className={classes.contactLinksContainer}>

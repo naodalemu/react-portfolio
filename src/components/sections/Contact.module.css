@@ -99,6 +99,8 @@
     font-size: 14px;
     border-radius: 5px;
     color: var(--primary-black);
+    text-align: center;
+    padding: 0px 10px;
 }
 
 .messageContainer {
@@ -176,9 +178,15 @@
 
 @media screen and (max-width: 425px) {
     .firstContactInfo, .lastContactInfo {
-        padding: 30px;
+        padding: 30px 30px 50px 30px;
     }
 }
+
+@media screen and (max-width: 392px) {
+    .failedMessageContainer {
+        bottom: 10px;
+    }
+} 
 
 @media screen and (max-width: 370px) {
     .contactLinks {
