@@ -72,7 +72,7 @@ function Contact() {
                     <button className={classes.contactButton} type="submit">Send</button>
                     {loading ? <div className={classes.messageContainer}><div className={classes.message}>Sending...</div></div> : null}
                     {successModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "green" }}>Successfully Sent</div></div> : null}
-                    {!FailedModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "firebrick" }}>Failed! Please check your internet connection</div></div> : null}
+                    {FailedModal ? <div className={classes.messageContainer}><div className={classes.message} style={{ color: "firebrick" }}>Failed! Please check your internet connection</div></div> : null}
                 </div>
             </motion.form>
             <div className={classes.contactLinksContainer}>

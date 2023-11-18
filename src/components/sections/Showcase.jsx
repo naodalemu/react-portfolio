@@ -38,7 +38,7 @@ function Showcase() {
             image: electricBill,
             languages: ["HTML", "CSS", "JavaScript"],
             githubLink: "https://github.com/naodalemu/Electric-billing-system",
-            liveServer: "",
+            liveServer: "https://github.com/naodalemu/Electric-billing-system",
         },
     ];
 
