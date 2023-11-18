@@ -3,9 +3,9 @@ import classes from "./Showcase.module.css";
 import { faLeftLong, faRightLong } from "@fortawesome/free-solid-svg-icons";
 import Projects from "../UI/Projects";
 import { useEffect, useState } from "react";
-import reactQuizImage from "../../assets/images/Showcase/ReactMockup.png";
-import libraryImage from "../../assets/images/Showcase/hero.png";
-import electricBill from "../../assets/images/Showcase/ElectricBill.png";
+import reactQuizImage from "../../assets/images/Showcase/ReactMockup-min.png";
+import libraryImage from "../../assets/images/Showcase/hero-min.png";
+import electricBill from "../../assets/images/Showcase/ElectricBill-min.png";
 import { motion } from "framer-motion";
 
 function Showcase() {
