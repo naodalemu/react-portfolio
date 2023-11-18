@@ -23,7 +23,7 @@ function Contact() {
         setSuccessModal(false)
         setFailedModal(false)
         setLoading(true)
-        emailjs.sendForm('service_3z9vgtc', 'template_6l7ma3f', form.current, 'ai0ySokHar3c5tE5p')
+        emailjs.sendForm('service_2v3pdmj', 'template_6l7ma3f', form.current, 'ai0ySokHar3c5tE5p')
         .then((result) => {
             setLoading(false)
             console.log(result.text);
