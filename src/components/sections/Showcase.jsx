@@ -28,7 +28,7 @@ function Showcase() {
             image: libraryImage,
             languages: ["HTML", "CSS", "JavaScript", "Chart.js"],
             githubLink: "https://github.com/naodalemu/BooksLibrary",
-            liveServer: "https://bookoflibs.netlify.app",
+            liveServer: "https://libofbooks.netlify.app",
         },
         {
             id: 2,
