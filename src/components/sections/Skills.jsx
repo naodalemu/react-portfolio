@@ -74,7 +74,7 @@ function Skills() {
             <SkillSet
               language={"React"}
               icon={faReact}
-              years={"2 years"}
+              years={"3 years"}
               percent={"60%"}
             />
           </div>
