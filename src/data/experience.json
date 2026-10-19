@@ -1,0 +1,49 @@
+[
+  {
+    "id": "barecare",
+    "role": "Full-Stack Developer",
+    "organization": "Barecare",
+    "start": "Oct 2025",
+    "end": "",
+    "location": "Remote",
+    "summary": "Building features across a six-service cosmetics commerce platform: the storefront and admin, the warehouse system, a B2B shop, an influencer platform and the SDKs that connect them.",
+    "url": "https://barecare.bg/"
+  },
+  {
+    "id": "vooglue",
+    "role": "React Developer",
+    "organization": "VooGlue (DAG)",
+    "start": "Feb 2025",
+    "end": "May 2026",
+    "location": "Remote",
+    "summary": "React development for DAG, VooGlue's crypto presale platform for asset-backed art collectables, including its presale sales dashboard.",
+    "url": "https://dag.vooglue.com/"
+  },
+  {
+    "id": "freelance",
+    "role": "Freelance Developer",
+    "organization": "Upwork",
+    "start": "Sep 2023",
+    "end": "",
+    "location": "Remote",
+    "summary": "Independent client work: Figma-to-code builds, page builders, dashboards, an analytics-platform integration and AI-driven UI prototypes. Top Rated with 100% Job Success and a 5.0 rating across 11 completed jobs."
+  },
+  {
+    "id": "omishtu",
+    "role": "Front-End Developer Intern",
+    "organization": "Omishtu Joy Ag Tech Solutions",
+    "start": "Jun 2024",
+    "end": "Aug 2024",
+    "summary": "Designed and built the interface of a self-service restaurant ordering system with a team of fellow interns.",
+    "url": "https://omishtu.com/"
+  },
+  {
+    "id": "insa",
+    "role": "Front-End Developer Intern",
+    "organization": "Information Network Security Agency (INSA)",
+    "start": "Jun 2023",
+    "end": "Aug 2023",
+    "summary": "Built the front end of a library management system in React and Razor, in a team of three alongside two backend developers.",
+    "url": "https://www.insa.gov.et/"
+  }
+]

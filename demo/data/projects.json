@@ -1,0 +1,398 @@
+[
+  {
+    "id": "loom-and-leaf-storefront",
+    "slug": "loom-and-leaf-storefront",
+    "title": "Loom & Leaf Storefront",
+    "subtitle": "Rebuilding a home-goods store so the catalogue loads in a second instead of four.",
+    "description": "A Laravel and React rebuild of a growing home-goods shop: a faster catalogue, a one-page checkout and an admin the team actually enjoys using.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 1,
+    "year": "2025",
+    "duration": "4 months",
+    "category": "E-commerce",
+    "projectType": "Client",
+    "status": "Live",
+    "role": "Full-Stack Developer",
+    "client": {
+      "name": "",
+      "descriptor": "An independent home-goods retailer",
+      "disclose": false
+    },
+    "team": [
+      "1 designer",
+      "1 developer (me)"
+    ],
+    "overview": "Loom & Leaf had outgrown a theme-based shop. Product pages were slow, the checkout spread across four screens, and every catalogue change needed a developer.\n\nI rebuilt the storefront and admin end to end, keeping the existing product data and URLs so search rankings carried over.",
+    "problem": "Category pages issued a separate query for every product's images, variants and stock, so a page of 24 products made dozens of database round trips. On mobile the catalogue took around four seconds to become usable.",
+    "approach": "I started from the screens: what each page needs to render, and nothing more. That defined the API responses, which in turn defined the queries.",
+    "solution": "A Laravel API with eager-loaded, cached catalogue queries, a React storefront that streams the first row of products immediately, and a one-page checkout with address autocomplete.",
+    "contributions": [
+      "Data model and migration from the old platform",
+      "Catalogue and checkout API",
+      "React storefront and checkout",
+      "Admin panel for products, stock and orders"
+    ],
+    "features": [
+      {
+        "title": "One-page checkout",
+        "description": "Address, delivery and payment on a single screen with inline validation."
+      },
+      {
+        "title": "Live stock",
+        "description": "Stock levels update without a page reload when an item sells out."
+      },
+      "Saved carts across devices",
+      "Bulk product editing in the admin"
+    ],
+    "decisions": [
+      {
+        "title": "Shape queries around the page, not the model",
+        "description": "Each storefront endpoint loads exactly the relations its screen renders, in a fixed number of queries regardless of page size.",
+        "tradeoff": "More endpoint-specific code instead of one generic product resource."
+      },
+      {
+        "title": "Keep the old URLs",
+        "description": "Products and categories kept their slugs, with redirects for the handful that changed.",
+        "tradeoff": "Some awkward legacy slugs live on."
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Migrating live orders",
+        "description": "Orders kept arriving during the migration, so the final import ran as a short, rehearsed cut-over with a read-only window of a few minutes."
+      }
+    ],
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Laravel",
+      "REST APIs",
+      "MySQL",
+      "Redis",
+      "Laravel Forge"
+    ],
+    "metrics": [
+      {
+        "label": "Database queries on a category page",
+        "before": "75",
+        "value": "3",
+        "context": "Demo figure — counted with Laravel Debugbar on a 24-product category page."
+      },
+      {
+        "label": "Category page load on mobile",
+        "before": "~4",
+        "value": "<1",
+        "unit": "s",
+        "context": "Demo figure — Lighthouse mobile profile, median of five runs."
+      }
+    ],
+    "results": [
+      "Checkout moved from four screens to one",
+      "The team edits the catalogue without developer help"
+    ],
+    "lessons": [
+      "Measuring query counts per page early would have found the problem in week one."
+    ],
+    "constraints": [
+      "Payment provider had to stay the same",
+      "No downtime during the switch-over"
+    ],
+    "links": {
+      "live": "https://example.com",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/loom-and-leaf-storefront/cover.webp",
+        "alt": "Loom & Leaf category page showing a grid of ceramics and textiles"
+      },
+      "desktop": [
+        {
+          "src": "/projects/loom-and-leaf-storefront/desktop-01.webp",
+          "alt": "Product page with gallery, variants and add-to-cart",
+          "caption": "Product page — variants and stock load with the page, not after it."
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/loom-and-leaf-storefront/mobile-01.webp",
+          "alt": "Mobile category grid",
+          "caption": "Category grid"
+        },
+        {
+          "src": "/projects/loom-and-leaf-storefront/mobile-02.webp",
+          "alt": "Mobile one-page checkout",
+          "caption": "One-page checkout"
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/loom-and-leaf-storefront/detail-01.webp",
+          "kind": "detail",
+          "alt": "Order summary panel",
+          "caption": "Order summary with delivery estimate."
+        },
+        {
+          "src": "/projects/loom-and-leaf-storefront/detail-02.webp",
+          "kind": "detail",
+          "alt": "Admin bulk product editor",
+          "caption": "Bulk editing in the admin."
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#D9C9B6",
+      "frame": "auto"
+    },
+    "related": [
+      "clinic-booking-mvp"
+    ]
+  },
+  {
+    "id": "routeboard-fleet-dashboard",
+    "slug": "routeboard-fleet-dashboard",
+    "title": "Routeboard",
+    "subtitle": "An operations dashboard for a delivery fleet, built with Laravel, Livewire and Filament.",
+    "description": "A SaaS dashboard that gives dispatchers one live view of vehicles, drivers and deliveries — replacing three spreadsheets and a group chat.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 2,
+    "year": "2025",
+    "duration": "6 months",
+    "category": "SaaS",
+    "projectType": "Freelance",
+    "status": "In production",
+    "role": "Lead Developer",
+    "client": {
+      "name": "",
+      "descriptor": "A logistics start-up",
+      "disclose": false
+    },
+    "overview": "Dispatchers were coordinating forty vehicles across spreadsheets and chat threads. Routeboard puts deliveries, drivers and exceptions on one screen that updates as things change.",
+    "problem": "Nobody had a single, current picture of the fleet. Late deliveries were noticed when customers called.",
+    "approach": "We shipped the smallest useful version — a live delivery board — in five weeks, then added roles, reporting and billing based on how dispatchers actually used it.",
+    "solution": "A multi-tenant Laravel application with Livewire for live boards and Filament for the back office, backed by MySQL and queued jobs for driver updates.",
+    "contributions": [
+      "Product scoping with the founders",
+      "Multi-tenant architecture",
+      "Live dispatch board",
+      "Reporting and CSV exports"
+    ],
+    "features": [
+      "Live delivery board",
+      "Exception alerts for late or failed drops",
+      "Per-company roles and permissions",
+      "Weekly performance reports"
+    ],
+    "techStack": [
+      "Laravel",
+      "Livewire",
+      "Filament",
+      "Alpine.js",
+      "Tailwind CSS",
+      "MySQL",
+      "Redis"
+    ],
+    "metrics": [
+      {
+        "label": "Time to first production release",
+        "value": "5",
+        "unit": "weeks",
+        "context": "Demo figure — from kickoff to dispatchers using the live board daily."
+      }
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/routeboard-fleet-dashboard/cover.webp",
+        "alt": "Routeboard dashboard with delivery stats, a trend chart and an active deliveries table"
+      },
+      "desktop": [
+        {
+          "src": "/projects/routeboard-fleet-dashboard/desktop-01.webp",
+          "alt": "Deliveries table with status filters",
+          "caption": "Deliveries, filterable by status and driver.",
+          "frame": "browser"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "ledgerline-payments-api",
+    "slug": "ledgerline-payments-api",
+    "title": "Ledgerline API",
+    "subtitle": "A double-entry ledger and payments API where every number has to add up.",
+    "description": "A backend-only project: a REST API that records payments, refunds and payouts in a double-entry ledger, with idempotent endpoints and full audit history.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 3,
+    "year": "2024",
+    "category": "API",
+    "projectType": "Client",
+    "status": "Completed",
+    "role": "Backend Developer",
+    "client": {
+      "name": "",
+      "descriptor": "A fintech product team",
+      "disclose": false
+    },
+    "overview": "Ledgerline is the money layer behind a marketplace: it records every movement of funds as balanced ledger entries and exposes them through a small, strict API.",
+    "problem": "Balances were stored as single numbers that drifted out of sync with payment-provider records, and reconciling them took a person two days each month.",
+    "approach": "Model money as immutable, balanced entries instead of mutable balances, and make every write endpoint safe to retry.",
+    "solution": "A Laravel API over MySQL with double-entry transactions, idempotency keys on every write, and nightly reconciliation against the payment provider.",
+    "decisions": [
+      {
+        "title": "Immutable ledger entries",
+        "description": "Balances are derived from entries, never edited directly. Corrections are new, opposite entries.",
+        "tradeoff": "Balance reads need aggregation, so hot balances are cached and rebuilt from entries when in doubt."
+      },
+      {
+        "title": "Idempotency keys on all writes",
+        "description": "Clients send a key with each request; retries return the original result instead of charging twice.",
+        "tradeoff": "Every client integration has to generate and store keys."
+      },
+      {
+        "title": "Integer minor units",
+        "description": "All amounts are stored as integers in the smallest currency unit to avoid floating-point drift."
+      }
+    ],
+    "challenges": [
+      {
+        "title": "Concurrent writes to the same account",
+        "description": "Row-level locks around entry creation, plus a database constraint that rejects any transaction whose entries don't sum to zero."
+      }
+    ],
+    "techStack": [
+      "PHP",
+      "Laravel",
+      "REST APIs",
+      "MySQL",
+      "Redis",
+      "Docker",
+      "GitHub Actions"
+    ],
+    "results": [
+      "Monthly reconciliation became an automated nightly job",
+      "Zero unbalanced transactions since launch (enforced by the database)"
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "visibility": {
+      "showGithubLink": false
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/ledgerline-payments-api/cover.webp",
+        "alt": "API reference page for creating a ledger transaction, with request and response examples"
+      }
+    },
+    "presentation": {
+      "caseStudy": "technical",
+      "accent": "",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "clinic-booking-mvp",
+    "slug": "clinic-booking-mvp",
+    "title": "Kindred Clinic Booking",
+    "subtitle": "A mobile-first booking MVP, designed in Figma and shipped in six weeks.",
+    "description": "An appointment-booking MVP for a small clinic group: patients book from their phones, staff manage schedules from a simple dashboard.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 4,
+    "year": "2024",
+    "duration": "6 weeks",
+    "category": "MVP",
+    "projectType": "Freelance",
+    "status": "Live",
+    "role": "Designer & Full-Stack Developer",
+    "overview": "Most bookings at the clinic happened by phone call. The MVP lets patients pick a doctor, a time and a reason for visiting in under a minute on their phone.",
+    "approach": "Designed the booking flow in Figma first and tested it with front-desk staff before writing code.",
+    "solution": "A React front end on a Laravel API, with SMS reminders and a staff dashboard for managing availability.",
+    "features": [
+      "Three-step booking flow",
+      "SMS confirmations and reminders",
+      "Staff availability calendar"
+    ],
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "Laravel",
+      "MySQL",
+      "Figma"
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/clinic-booking-mvp/cover.webp",
+        "alt": "Kindred Clinic booking screens on a soft blue background"
+      },
+      "mobile": [
+        {
+          "src": "/projects/clinic-booking-mvp/mobile-01.webp",
+          "alt": "Choose a doctor screen",
+          "caption": "1 — Choose a doctor"
+        },
+        {
+          "src": "/projects/clinic-booking-mvp/mobile-02.webp",
+          "alt": "Pick a time screen",
+          "caption": "2 — Pick a time"
+        },
+        {
+          "src": "/projects/clinic-booking-mvp/mobile-03.webp",
+          "alt": "Booking confirmed screen",
+          "caption": "3 — Confirmed"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#CFDCE6",
+      "frame": "auto"
+    },
+    "related": [
+      "loom-and-leaf-storefront"
+    ]
+  },
+  {
+    "id": "reporting-toolkit",
+    "slug": "reporting-toolkit",
+    "title": "Sales Reporting Toolkit",
+    "description": "An internal tool that turns raw order exports into weekly sales reports. Listed in the index only — no screenshots yet.",
+    "featured": false,
+    "published": true,
+    "sortOrder": 10,
+    "year": "2023",
+    "category": "Internal tool",
+    "role": "Full-Stack Developer",
+    "techStack": [
+      "Laravel",
+      "Livewire",
+      "MySQL"
+    ]
+  }
+]

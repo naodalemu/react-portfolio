@@ -1,0 +1,355 @@
+{
+  "name": "Naod Alemu",
+  "shortName": "Naod",
+  "title": "Full-Stack Developer",
+  "workingHours": {
+    "label": "Online now",
+    "timeZone": "America/New_York"
+  },
+  "url": "https://naods-portfolio.vercel.app",
+  "availability": "",
+  "email": "naodalemu11@gmail.com",
+  "resume": "/resume/naod-alemu-resume.pdf",
+  "profileImage": {
+    "src": "/profile/naod-alemu.webp",
+    "alt": "Portrait of Naod Alemu, smiling, in a black t-shirt"
+  },
+  "links": {
+    "github": "https://github.com/naodalemu",
+    "linkedin": "https://www.linkedin.com/in/naod-alemu-a189a9376/",
+    "upwork": "https://www.upwork.com/freelancers/~01cb9ac80cc3e1114e",
+    "other": []
+  },
+  "hero": {
+    "eyebrow": "Full-stack developer · Laravel, React & MySQL",
+    "headlineLead": "From the first pixel",
+    "headlineFollow": "to the last query.",
+    "lede": "I'm Naod, a full-stack developer. For 5+ years I've built SaaS products, e-commerce platforms and APIs for 17+ clients, covering the database, the business logic, the integrations between systems and the interface on top.",
+    "trail": [
+      {
+        "src": "/trail/barecare-00.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/mixer-00.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/upwork-00.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-00.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-00.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/barecare-01.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-01.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-01.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-03.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-02.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-07.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-09.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-13.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-11.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-14.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-13.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-16.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-15.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-21.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/winna-18.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-24.webp",
+        "width": 640,
+        "height": 400
+      },
+      {
+        "src": "/trail/walkout-27.webp",
+        "width": 640,
+        "height": 400
+      }
+    ]
+  },
+  "about": {
+    "statement": "I build the whole product: the schema, the services, the integrations and the interface people use.",
+    "bio": [
+      "My work spans the full stack: Laravel and PHP services, MySQL schemas and queries, REST APIs and the integrations between systems, and React, Livewire and Alpine.js interfaces on top. At Barecare that means a multi-service commerce platform: a storefront, a warehouse system, a B2B shop and an influencer platform that all have to agree with one another.",
+      "The work I'm best at happens where systems meet: an order that has to exist in two databases, a checkout that must never submit twice, a listing that quietly runs a query for every row. Those problems cost real money, and they only show up when you understand every layer involved.",
+      "I started out building interfaces, and it still shows in how I work: APIs designed around the screens that consume them, queries shaped around what a page actually needs, and performance treated as part of the product rather than an afterthought."
+    ],
+    "facts": [
+      {
+        "label": "Now",
+        "value": "Full-Stack Developer at Barecare"
+      },
+      {
+        "label": "Focus",
+        "value": "Laravel, React, MySQL"
+      },
+      {
+        "label": "Looking for",
+        "value": "Full-time remote roles"
+      },
+      {
+        "label": "Languages",
+        "value": "English, Amharic"
+      }
+    ]
+  },
+  "credentials": {
+    "items": [
+      {
+        "value": "5+",
+        "label": "Years building for the web"
+      },
+      {
+        "value": "17+",
+        "label": "Clients served"
+      },
+      {
+        "value": "Top Rated",
+        "label": "Freelancer status on Upwork"
+      },
+      {
+        "value": "100%",
+        "label": "Job Success Score on Upwork"
+      }
+    ],
+    "note": "Profile figures as of October 2026."
+  },
+  "impact": {
+    "intro": "The problems I solve best sit between layers and between systems: where a page meets the database, and where one service has to agree with another.",
+    "highlights": [
+      {
+        "value": "75 → 3",
+        "label": "Database queries per page on a warehouse admin listing",
+        "context": "Barecare’s purchase-order listing loaded each row’s vendor, documents and quantities separately. Eager loading and SQL aggregates brought it to a constant three queries, and the page now loads in about a second.",
+        "projectSlug": "barecare"
+      },
+      {
+        "value": "~4 s → <1 s",
+        "label": "Page load time",
+        "context": "A separately reported measurement, not a comparison with the figure above.",
+        "projectSlug": ""
+      }
+    ],
+    "themes": [
+      {
+        "title": "Database query optimization",
+        "description": "Finding N+1 patterns and redundant queries, then reshaping data access around what each page needs."
+      },
+      {
+        "title": "API and backend architecture",
+        "description": "Laravel applications and REST APIs designed around the screens and integrations that depend on them."
+      },
+      {
+        "title": "E-commerce performance",
+        "description": "Catalogue, product and checkout pages where load time translates directly into lost or completed orders."
+      },
+      {
+        "title": "Responsive frontend engineering",
+        "description": "Interfaces that hold up from large monitors down to small phones, built from the design file rather than approximated."
+      },
+      {
+        "title": "SaaS product development",
+        "description": "Taking products from MVP scope to an application that stays maintainable as real users arrive."
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "frontend",
+      "layer": "Interface",
+      "title": "Frontend",
+      "description": "Responsive, accessible interfaces with a component structure that stays maintainable as the product grows.",
+      "tools": [
+        "React",
+        "Next.js",
+        "TypeScript",
+        "JavaScript",
+        "Alpine.js",
+        "Tailwind CSS",
+        "shadcn/ui",
+        "Material UI",
+        "Bootstrap",
+        "Vite"
+      ],
+      "display": "logos"
+    },
+    {
+      "id": "backend",
+      "layer": "Application",
+      "title": "Backend",
+      "description": "Laravel applications, admin panels and REST APIs, with the business logic kept clear and testable.",
+      "tools": [
+        "PHP",
+        "Laravel",
+        "Livewire",
+        "Filament"
+      ],
+      "display": "logos",
+      "concepts": [
+        "REST APIs",
+        "Laravel Sanctum",
+        "Queues & jobs"
+      ]
+    },
+    {
+      "id": "data",
+      "layer": "Data",
+      "title": "Data",
+      "description": "Schema design, query optimization and the page-load improvements that follow from them.",
+      "tools": [
+        "MySQL",
+        "Redis / Valkey"
+      ],
+      "display": "logos",
+      "concepts": [
+        "Schema design",
+        "Query optimization"
+      ]
+    },
+    {
+      "id": "products",
+      "layer": "Product",
+      "title": "E-commerce & SaaS",
+      "description": "Product platforms from the first MVP to the features that come after launch.",
+      "tools": [
+        "SaaS applications",
+        "E-commerce",
+        "B2B & warehouse systems",
+        "MVP development",
+        "Payment & POS integrations"
+      ],
+      "display": "also"
+    },
+    {
+      "id": "design",
+      "layer": "Craft",
+      "title": "Design to code",
+      "description": "Design files implemented faithfully in production code, including the states designers don't always draw.",
+      "tools": [
+        "Figma",
+        "Adobe XD",
+        "Canva"
+      ],
+      "display": "also"
+    },
+    {
+      "id": "ai",
+      "layer": "Craft",
+      "title": "AI-assisted development",
+      "description": "Working with AI coding agents to speed up delivery across the stack.",
+      "tools": [
+        "AI coding agents",
+        "AI-assisted development"
+      ],
+      "display": "also"
+    },
+    {
+      "id": "delivery",
+      "layer": "Infrastructure",
+      "title": "Delivery & tools",
+      "description": "Containerised local environments, automated tests and deployments that keep shipping routine.",
+      "tools": [
+        "Docker",
+        "AWS",
+        "Vercel",
+        "Git",
+        "GitHub",
+        "GitLab",
+        "Figma",
+        "PHPUnit",
+        "Vitest"
+      ],
+      "display": "logos"
+    }
+  ],
+  "contact": {
+    "heading": "Have a product to build?",
+    "text": "Tell me what you're working on: a new product, an existing app that needs to be faster, or an interface that needs to be built properly. I'll reply by email.",
+    "emailjs": {
+      "serviceId": "service_2v3pdmj",
+      "templateId": "template_105hbsu",
+      "publicKey": "ai0ySokHar3c5tE5p"
+    }
+  },
+  "seo": {
+    "title": "Naod Alemu | Full-Stack Developer",
+    "description": "Naod Alemu is a full-stack developer building SaaS products, e-commerce platforms and APIs with Laravel, React and MySQL, from database design to production interfaces.",
+    "ogImage": "/og.png",
+    "twitterHandle": "",
+    "themeColor": "#F1EEE7"
+  },
+  "footer": {
+    "text": "Designed and built by Naod Alemu."
+  }
+}

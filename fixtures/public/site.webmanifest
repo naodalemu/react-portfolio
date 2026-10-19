@@ -1,0 +1,14 @@
+{
+  "name": "Naod Alemu — Full-Stack Developer",
+  "short_name": "Naod Alemu",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "type": "image/svg+xml",
+      "sizes": "any"
+    }
+  ],
+  "theme_color": "#F1EEE7",
+  "background_color": "#F1EEE7",
+  "display": "browser"
+}

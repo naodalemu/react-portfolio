@@ -1,0 +1,698 @@
+[
+  {
+    "id": "barecare",
+    "slug": "barecare",
+    "title": "Barecare",
+    "subtitle": "Full-stack work across a six-service cosmetics commerce platform: shop, warehouse, B2B and influencer systems.",
+    "description": "Barecare sells 2,100+ Korean and Japanese cosmetics products in Bulgaria. As part of the engineering team I build features across the storefront and admin, the warehouse system, a B2B shop and an influencer platform, and the SDKs that connect them.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 1,
+    "year": "2025–2026",
+    "duration": "Oct 2025 – present",
+    "category": "E-commerce",
+    "projectType": "Employment",
+    "status": "Live",
+    "role": "Full-Stack Developer",
+    "client": {
+      "name": "Barecare",
+      "descriptor": "",
+      "disclose": true
+    },
+    "team": [
+      "Multi-developer engineering team"
+    ],
+    "overview": "Barecare is a cosmetics retailer running its online shop, physical shop, warehouse, B2B sales and influencer programme on a set of Laravel services that talk to each other through shared SDKs.\n\nI work across all of them. My 240+ commits since December 2025 span six repositories, from the checkout and in-store order flow to warehouse stock states and the APIs that let the services create orders and users in one another.",
+    "problem": "Each part of the business runs on its own service, so most features cross a boundary: an order placed in the shop has to exist in the warehouse, a B2B order has to check real stock, an approved influencer needs an account in the main platform. Keeping those systems consistent is most of the work.",
+    "approach": "I build features end to end (database changes, service logic, the API or SDK call to the neighbouring service, and the admin or storefront interface) and add the checks that catch it when two systems disagree.",
+    "contributions": [
+      "In-store order flow rebuilt in Alpine.js with barcode scanning, cash and card payments, and MyPOS card-terminal integration",
+      "Order ↔ warehouse synchronisation, status history and discrepancy flags when the two systems disagree",
+      "B2B order creation from CSV/XLSX uploads, with a preview and a warehouse availability check before anything is created",
+      "Shop inventory receiving with barcodes and expiry dates, stock adjustments and order returns",
+      "Product search and catalogue improvements, search translations, structured SEO metadata and a reorderable category tree",
+      "Warehouse system: item statuses moved to a state machine, coming-stock deliveries and receiving, priority and customs statuses, short-expiry warnings",
+      "Query optimisation on the warehouse purchase-order listing to remove duplicate queries",
+      "Cross-service APIs: creating orders and internal users between the shop, warehouse and influencer platform through shared SDKs",
+      "B2B shop: expiry and broken-stock flags, warehouse expiry sync, customer-group inventory rules and SKU-level Excel exports"
+    ],
+    "techStack": [
+      "PHP",
+      "Laravel",
+      "Livewire",
+      "Filament",
+      "Alpine.js",
+      "Tailwind CSS",
+      "MySQL",
+      {
+        "name": "Valkey",
+        "layer": "data"
+      },
+      "Docker",
+      "AWS",
+      "REST APIs"
+    ],
+    "links": {
+      "live": "https://barecare.bg/",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "visibility": {
+      "showGithubLink": false
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/barecare/cover.webp",
+        "alt": "Barecare homepage with the product search, category navigation and a promotional banner"
+      },
+      "desktop": [
+        {
+          "src": "/projects/barecare/desktop-01.webp",
+          "alt": "Barecare bestsellers row with product cards, ratings and discount codes",
+          "caption": "The storefront: bestsellers with live promo pricing."
+        },
+        {
+          "src": "/projects/barecare/desktop-02.webp",
+          "alt": "Barecare category page with availability, price and ingredient filters",
+          "caption": "Category listing with availability, price and ingredient filters."
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/barecare/mobile-01.webp",
+          "alt": "Barecare homepage on a phone",
+          "caption": "Homepage"
+        },
+        {
+          "src": "/projects/barecare/mobile-02.webp",
+          "alt": "Barecare category listing on a phone",
+          "caption": "Category listing"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "technical",
+      "accent": "#E8D3DE",
+      "frame": "auto"
+    },
+    "related": [
+      "walk-out"
+    ],
+    "metrics": [
+      {
+        "label": "Database queries per page on the warehouse purchase-order listing",
+        "before": "75",
+        "value": "3",
+        "unit": "",
+        "context": "Each row lazily loaded its vendor, documents and variation quantities (N+1). Eager loading plus withCount and withSum made the query count constant; the page now loads in about a second."
+      }
+    ]
+  },
+  {
+    "id": "walk-out",
+    "slug": "walk-out",
+    "title": "Walk Out",
+    "subtitle": "A productivity platform that turns focus, reading and habits into progression, with real stakes if you want them.",
+    "description": "My own startup, in active development: a React app on a Laravel API that tracks deep work, reading, study and screen time, turns it into XP, streaks and leagues, and lets people back their goals with money or friends.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 2,
+    "year": "2026",
+    "duration": "Since September 2026",
+    "category": "SaaS",
+    "projectType": "Personal",
+    "status": "In development",
+    "role": "Founder & Full-Stack Developer",
+    "overview": "Most productivity tools record what you did and move on. Walk Out keeps it: every focus session, chapter read and goal hit feeds a profile that levels up, keeps streaks and competes in leagues.\n\nUnder the hood it is a versioned REST API with around 85 models and 112 migrations behind a React front end.",
+    "approach": "The backend is organised by domain (productivity, reading, study, movement, screen time, social, staking, verification), each with its own controllers, services and tests, all behind one versioned API with a consistent response envelope.",
+    "solution": "A Laravel 12 API secured with Sanctum, with queued jobs and scheduled tasks for evaluations, and a React 19 front end built with Vite, Tailwind CSS and Motion.",
+    "features": [
+      {
+        "title": "Focus timer",
+        "description": "Deep work and Pomodoro modes that log sessions straight into goals and streaks."
+      },
+      {
+        "title": "Reading library",
+        "description": "A book library with an in-app EPUB and PDF reader, reading goals and recommendations."
+      },
+      {
+        "title": "Progression",
+        "description": "XP, levels, belts, leagues, achievements and a hall of fame."
+      },
+      {
+        "title": "Commitments with stakes",
+        "description": "Commit to a measurable habit, optionally with money at risk from an in-app wallet."
+      },
+      {
+        "title": "Rooms and tournaments",
+        "description": "Friends, shared challenge rooms, leaderboards and team tournaments."
+      },
+      {
+        "title": "Integrations",
+        "description": "WakaTime coding time, plus ingestion endpoints for movement and screen-time data from mobile."
+      }
+    ],
+    "techStack": [
+      "React",
+      "Tailwind CSS",
+      "JavaScript",
+      "Laravel",
+      "PHP",
+      "REST APIs",
+      "MySQL"
+    ],
+    "results": [
+      "Around 85 models and 112 database migrations across its product domains",
+      "101 backend test files covering the API"
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/walk-out/cover.webp",
+        "alt": "Walk Out landing page: a grey crowd of identical figures under the headline Everyone's focused"
+      },
+      "desktop": [
+        {
+          "src": "/projects/walk-out/desktop-02.webp",
+          "alt": "Walk Out dashboard with XP progression, streaks by activity and active goals",
+          "caption": "The dashboard: XP, streaks per activity and active goals."
+        },
+        {
+          "src": "/projects/walk-out/desktop-01.webp",
+          "alt": "Walk Out focus timer in deep work mode",
+          "caption": "Focus mode: deep work or Pomodoro, logged straight into goals."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/walk-out/desktop-03.webp",
+          "kind": "desktop",
+          "alt": "Walk Out book library with cover art and reading filters",
+          "caption": "The reading library, with an in-app EPUB/PDF reader behind each book."
+        },
+        {
+          "src": "/projects/walk-out/desktop-04.webp",
+          "kind": "desktop",
+          "alt": "Walk Out task board with To do, Doing and Done columns",
+          "caption": "One board for goals, staked commitments and challenges."
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/walk-out/mobile-03.webp",
+          "alt": "Walk Out landing page on a phone",
+          "caption": "Landing"
+        },
+        {
+          "src": "/projects/walk-out/mobile-01.webp",
+          "alt": "Walk Out dashboard on a phone",
+          "caption": "Dashboard"
+        },
+        {
+          "src": "/projects/walk-out/mobile-02.webp",
+          "alt": "Walk Out focus timer on a phone",
+          "caption": "Focus"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#CBD8B4",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "winna-coffee",
+    "slug": "winna-coffee",
+    "title": "Winna Coffee",
+    "subtitle": "An export website for a single-origin Ethiopian green-coffee farm.",
+    "description": "A marketing site for Winna Trading PLC, which grows and exports shade-grown Arabica from its own farm in Southwest Ethiopia. Built to present the farm, its varieties and its process to roasters, and to turn visits into sample requests.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 3,
+    "year": "2026",
+    "category": "Website",
+    "projectType": "Client",
+    "status": "Live",
+    "role": "Designer & Developer",
+    "client": {
+      "name": "Winna Trading PLC",
+      "descriptor": "An Ethiopian green-coffee exporter",
+      "disclose": true
+    },
+    "overview": "Winna exports green coffee from the Nibo Sendeka farm in the Sheka Zone. Their buyers are roasters abroad, so the site has to work like a farm profile: where the coffee is grown, how, and what makes it different, with a clear path to request samples or a quote.",
+    "solution": "A single-page React and TypeScript site with editorial typography, full-bleed farm photography, a detailed farm profile (area, mapped blocks, coordinates, altitude, rainfall, soil) and persistent quote and WhatsApp actions.",
+    "features": [
+      "Farm profile with area, block structure, location, coordinates and growing conditions",
+      "Varieties section presenting each Arabica selection grown on the farm",
+      "Step-by-step process from cultivation to direct export",
+      "Persistent “Request a quote” and WhatsApp contact actions",
+      "Responsive layout for buyers browsing on phones"
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      "Vercel"
+    ],
+    "links": {
+      "live": "https://winna-coffee.vercel.app/",
+      "github": "https://github.com/naodalemu/winna-coffee",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/winna-coffee/cover.webp",
+        "alt": "Winna Coffee hero: terraced coffee hills in Southwest Ethiopia under the headline Ethiopia's finest organic coffee"
+      },
+      "desktop": [
+        {
+          "src": "/projects/winna-coffee/desktop-01.webp",
+          "alt": "Winna about section: A single-origin farm, from soil to shipment",
+          "caption": "Editorial typography carries the brand."
+        },
+        {
+          "src": "/projects/winna-coffee/desktop-02.webp",
+          "alt": "Winna farm profile with four cards: farm overview, location, coordinates and growing conditions",
+          "caption": "The farm profile: the details roasters ask for first."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/winna-coffee/detail-01.webp",
+          "kind": "detail",
+          "alt": "Winna section listing organic practices, high altitude and direct sourcing",
+          "caption": "What sets the coffee apart."
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/winna-coffee/mobile-01.webp",
+          "alt": "Winna Coffee hero on a phone",
+          "caption": "Mobile hero"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#DED3C1",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "affordly",
+    "slug": "affordly",
+    "title": "Affordly",
+    "subtitle": "A mortgage readiness analyser for people whose income changes every month.",
+    "description": "A local-first tool I built for myself: import your real income history as a CSV and it tells you whether a mortgage is safe, borderline or risky, and why, using stress tests, a transparent readiness score and nothing ever uploaded.",
+    "featured": false,
+    "published": true,
+    "sortOrder": 5,
+    "year": "2026",
+    "category": "Fintech tool",
+    "projectType": "Personal",
+    "status": "Completed",
+    "role": "Designer & Developer",
+    "overview": "A normal mortgage calculator answers “what will my payment be?”. Freelance income doesn't fit that question. Affordly answers “given my actual, irregular income, when would this mortgage be reasonable, and why?”, and shows every number behind the answer.",
+    "problem": "Averages hide the months that hurt. A freelancer can earn well on average and still miss payments in lean months, so affordability has to be judged against the real shape of the income, not one number.",
+    "approach": "Keep the financial engine as pure, tested TypeScript, completely separate from React, and make every output explainable: each score component shows its weight and the figure behind it.",
+    "solution": "A React 19 and TypeScript app with a calculation layer covering income analysis, an exact amortisation schedule, affordability ratios, stress testing and a readiness score, all running in the browser, saved only to local storage.",
+    "features": [
+      {
+        "title": "CSV import",
+        "description": "Automatic column mapping, currency detection and per-row validation, with a preview before processing."
+      },
+      {
+        "title": "Income analysis",
+        "description": "Median vs average, volatility, rolling averages and trend classification."
+      },
+      {
+        "title": "Stress testing",
+        "description": "25–100% income-loss tables, consecutive lean-month simulation and a backtest against every real month."
+      },
+      {
+        "title": "Readiness score",
+        "description": "A transparent 0–100 score with every weighted component inspectable."
+      },
+      {
+        "title": "Multi-currency",
+        "description": "USD, ETB, EUR and GBP with separate income and mortgage currencies and manual exchange-rate scenarios."
+      }
+    ],
+    "decisions": [
+      {
+        "title": "Local-first, no backend",
+        "description": "Financial data never leaves the browser; the analysis lives in local storage and can be exported as JSON or a printable report.",
+        "tradeoff": "No sync between devices."
+      },
+      {
+        "title": "Median before average",
+        "description": "Typical income is the median month, so one great month can't make a risky mortgage look safe."
+      }
+    ],
+    "techStack": [
+      "React",
+      "TypeScript",
+      "Tailwind CSS",
+      "Vite",
+      {
+        "name": "Recharts",
+        "layer": "interface"
+      },
+      {
+        "name": "Vitest",
+        "layer": "tooling"
+      }
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/affordly/cover.webp",
+        "alt": "Affordly dashboard showing a readiness score of 86, income cards and an income chart (demo data)",
+        "caption": "Shown with the built-in demo dataset."
+      },
+      "desktop": [
+        {
+          "src": "/projects/affordly/desktop-07.webp",
+          "alt": "Affordly stress test table showing cash flow at 25 to 100 percent income loss",
+          "caption": "Stress test: what each income drop does to monthly cash flow."
+        },
+        {
+          "src": "/projects/affordly/desktop-08.webp",
+          "alt": "Affordly readiness score with positive factors and concerns",
+          "caption": "A score you can audit: every factor is listed."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/affordly/desktop-03.webp",
+          "kind": "desktop",
+          "alt": "Affordly income analysis page"
+        },
+        {
+          "src": "/projects/affordly/detail-01.webp",
+          "kind": "desktop",
+          "alt": "Affordly CSV import preview with column mapping and validation",
+          "caption": "Import preview with validation before anything is processed."
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "technical",
+      "accent": "",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "backtest-viewer",
+    "slug": "backtest-viewer",
+    "title": "Backtest Viewer",
+    "subtitle": "An analysis dashboard for Freqtrade trading-bot backtests, built to catch results that are too good to be true.",
+    "description": "A personal tool for my algorithmic-trading research: drop in Freqtrade backtest files and compare strategies across equity, drawdown, fees, exit reasons and monthly returns, with warnings when a backtest can't be trusted.",
+    "featured": false,
+    "published": true,
+    "sortOrder": 6,
+    "year": "2026",
+    "category": "Data tool",
+    "projectType": "Personal",
+    "status": "Live",
+    "role": "Developer",
+    "overview": "Freqtrade's built-in reports are text tables. I wanted to see strategies side by side, over any date range, and to know when a result was inflated by how the backtest was run, so I built two viewers that read backtest files directly in the browser.",
+    "features": [
+      "Load backtest .zip or .json files, or scan a whole results folder at once",
+      "Compare multiple strategies with a date-range slider and year presets",
+      "Equity curves, real drawdown and time underwater",
+      "Exit-reason, fee-impact, per-pair and monthly heatmap breakdowns",
+      "Warnings for backtests run without intrabar detail, which can inflate results",
+      "A second “Realism” viewer that models money across exchanges over time"
+    ],
+    "decisions": [
+      {
+        "title": "Deploy only the viewers",
+        "description": "The viewers live inside the bot's working folder, so the deployment ignores everything except the HTML files, so API credentials, strategies and market data never reach the host."
+      }
+    ],
+    "techStack": [
+      "JavaScript",
+      "HTML",
+      "CSS",
+      {
+        "name": "Chart.js",
+        "layer": "interface"
+      },
+      "Vercel"
+    ],
+    "links": {
+      "live": "https://backtest-viewer-lime.vercel.app",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/backtest-viewer/desktop-01.webp",
+        "alt": "Backtest Viewer equity curves comparing four retired strategies over five years"
+      },
+      "desktop": [
+        {
+          "src": "/projects/backtest-viewer/cover.webp",
+          "alt": "Backtest Viewer strategy comparison table with a warning about missing intrabar detail",
+          "caption": "The viewer flags backtests whose numbers can't be trusted. Here, results run on hourly candles only."
+        },
+        {
+          "src": "/projects/backtest-viewer/desktop-03.webp",
+          "alt": "Monthly profit bars and a monthly return heatmap",
+          "caption": "Monthly returns, as bars and as a heatmap."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/backtest-viewer/desktop-02.webp",
+          "kind": "desktop",
+          "alt": "Drawdown and time underwater chart"
+        },
+        {
+          "src": "/projects/backtest-viewer/detail-01.webp",
+          "kind": "desktop",
+          "alt": "Fee impact on profit chart"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "upwork-analytics",
+    "slug": "upwork-analytics",
+    "title": "Upwork Income Analytics",
+    "subtitle": "An open-source dashboard that turns an Upwork transaction export into income insights.",
+    "description": "Upload your Upwork CSV and get income trends, top clients, hourly-rate changes and productivity charts, processed entirely in the browser, with a sample-data mode to try it instantly.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 4,
+    "year": "2025",
+    "category": "Data tool",
+    "projectType": "Open source",
+    "status": "Live",
+    "role": "Developer",
+    "features": [
+      "More than ten charts covering income over time, top contracts and hourly rate",
+      "Date-range filtering with a calendar picker",
+      "Instant demo mode with sample data",
+      "All processing in the browser: no uploads, no account",
+      "Step-by-step guide to exporting and combining Upwork reports"
+    ],
+    "techStack": [
+      "Next.js",
+      "TypeScript",
+      "Tailwind CSS",
+      "shadcn/ui",
+      {
+        "name": "Recharts",
+        "layer": "interface"
+      },
+      "Vercel"
+    ],
+    "links": {
+      "live": "https://upwork-analytics-alpha.vercel.app/",
+      "github": "https://github.com/naodalemu/upwork-analytics",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/upwork-analytics/cover.webp",
+        "alt": "Upwork Insights landing page: Turn your Upwork history into real financial clarity"
+      },
+      "desktop": [
+        {
+          "src": "/projects/upwork-analytics/desktop-01.webp",
+          "alt": "Upwork Income Analytics overview: total income, hours, average rate and a monthly income trend",
+          "caption": "The dashboard, shown with a demo dataset."
+        },
+        {
+          "src": "/projects/upwork-analytics/desktop-03.webp",
+          "alt": "Income and hourly-rate trend charts",
+          "caption": "Income and hourly-rate trends over three years."
+        },
+        {
+          "src": "/projects/upwork-analytics/detail-02.webp",
+          "alt": "Advanced analytics cards and productivity by session length",
+          "caption": "Growth, rate and productivity analytics."
+        }
+      ],
+      "gallery": [
+        {
+          "src": "/projects/upwork-analytics/detail-01.webp",
+          "kind": "desktop",
+          "alt": "Projects tab with earnings per contract"
+        },
+        {
+          "src": "/projects/upwork-analytics/desktop-04.webp",
+          "kind": "desktop",
+          "alt": "Productivity tab"
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/upwork-analytics/mobile-light.webp",
+          "alt": "Landing page on a phone",
+          "caption": "Landing"
+        },
+        {
+          "src": "/projects/upwork-analytics/mobile-02.webp",
+          "alt": "Dashboard on a phone",
+          "caption": "Dashboard"
+        }
+      ],
+      "thumbnail": ""
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "stem-mixer",
+    "slug": "stem-mixer",
+    "title": "Stem Mixer",
+    "subtitle": "A browser mixer for the stems that AI splitters produce.",
+    "description": "A tool I made for my own music composing: drop in the stems from UVR, Demucs or any splitter and they play back in sync, with mute, solo, per-track volume, looping and export to WAV or MP3.",
+    "featured": false,
+    "published": true,
+    "sortOrder": 7,
+    "year": "2026",
+    "category": "Audio tool",
+    "projectType": "Personal",
+    "status": "Live",
+    "role": "Developer",
+    "features": [
+      "Drag in files or a whole folder; tracks decode and play in sync",
+      "Mute, solo and volume per stem, plus a master fader",
+      "Loop a section and scrub with waveform previews",
+      "Export the mix as WAV, MP3 320 or MP3 128, rendered offline",
+      "Keyboard-first: every control has a shortcut"
+    ],
+    "techStack": [
+      "React",
+      "JavaScript",
+      {
+        "name": "Web Audio API",
+        "layer": "interface"
+      },
+      {
+        "name": "lamejs",
+        "layer": "tooling"
+      },
+      "Vercel"
+    ],
+    "links": {
+      "live": "https://mixer-nu-ten.vercel.app/",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/stem-mixer/cover.webp",
+        "alt": "Stem Mixer with four tracks (vocals, drums, bass, other) showing waveforms and controls"
+      },
+      "desktop": [
+        {
+          "src": "/projects/stem-mixer/detail-02.webp",
+          "alt": "Stem Mixer keyboard shortcuts panel",
+          "caption": "Every control is on the keyboard."
+        }
+      ],
+      "mobile": [
+        {
+          "src": "/projects/stem-mixer/mobile-01.webp",
+          "alt": "Stem Mixer empty state on a phone",
+          "caption": "Drop zone"
+        },
+        {
+          "src": "/projects/stem-mixer/mobile-02.webp",
+          "alt": "Stem Mixer with four stems loaded on a phone",
+          "caption": "Four stems loaded"
+        }
+      ]
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#CDD2E4",
+      "frame": "auto"
+    }
+  },
+  {
+    "id": "example-project",
+    "slug": "example-project",
+    "title": "Example Project",
+    "subtitle": "One sentence that positions the project: what it is and who it is for.",
+    "description": "Two or three sentences for the project preview on the homepage. Copy this object to add a real project.",
+    "featured": false,
+    "published": false,
+    "sortOrder": 99,
+    "year": "2026",
+    "category": "SaaS",
+    "projectType": "Client",
+    "status": "Completed",
+    "role": "Full-Stack Developer",
+    "client": {
+      "name": "",
+      "descriptor": "A logistics company in East Africa",
+      "disclose": false
+    },
+    "techStack": [
+      "Laravel",
+      "React",
+      "MySQL",
+      "Tailwind CSS"
+    ],
+    "links": {
+      "live": "",
+      "github": "",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": "/projects/example-project/cover.webp"
+    }
+  }
+]

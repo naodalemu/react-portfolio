@@ -1,0 +1,17 @@
+[
+  {
+    "id": "t1",
+    "quote": "TEST quote from a named client.",
+    "name": "Test Person",
+    "role": "CTO",
+    "organization": "Test Co",
+    "projectSlug": "fixture-full"
+  },
+  {
+    "id": "t2",
+    "quote": "TEST anonymized quote.",
+    "anonymized": true,
+    "role": "Founder",
+    "organization": "a test startup"
+  }
+]
