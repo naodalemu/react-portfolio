@@ -1,0 +1,195 @@
+{
+  "name": "Naod Alemu",
+  "shortName": "Naod",
+  "title": "Full-Stack Developer",
+  "url": "https://fixture.example",
+  "location": {
+    "city": "Addis Ababa",
+    "country": "Ethiopia",
+    "countryCode": "ET",
+    "timeZone": "Africa/Addis_Ababa",
+    "timeZoneLabel": "EAT"
+  },
+  "availability": "TEST availability",
+  "email": "test@fixture.example",
+  "resume": "",
+  "profileImage": "",
+  "links": {
+    "github": "https://github.com/naodalemu",
+    "linkedin": "https://www.linkedin.com/in/example",
+    "upwork": "",
+    "other": []
+  },
+  "hero": {
+    "eyebrow": "Full-stack developer — Laravel & React",
+    "headlineLead": "From the first pixel",
+    "headlineFollow": "to the last query.",
+    "lede": "I'm Naod, a full-stack developer in Addis Ababa. For 5+ years I've built SaaS products, e-commerce platforms and APIs for 17+ clients — the interface people use and the systems underneath it."
+  },
+  "about": {
+    "statement": "I started on the frontend, and it still shapes how I build everything underneath.",
+    "bio": [
+      "For years my work was interfaces: turning Figma and Adobe XD designs into responsive, production-ready screens, and getting the small details of layout and interaction right.",
+      "That work kept leading me further down the stack. A slow screen is often a slow query; an awkward form is often an awkward API. So I moved into backend engineering — PHP, Laravel, MySQL and REST APIs — and now build products end to end.",
+      "Starting from the interface changes how I build the rest. I design APIs around the screens that consume them, shape database queries around what a page actually needs, and treat performance as part of the user experience rather than a separate task."
+    ]
+  },
+  "credentials": {
+    "items": [
+      {
+        "value": "5+",
+        "label": "Years building for the web"
+      },
+      {
+        "value": "17+",
+        "label": "Clients served"
+      },
+      {
+        "value": "Top Rated",
+        "label": "Freelancer status on Upwork"
+      },
+      {
+        "value": "100%",
+        "label": "Job Success Score on Upwork"
+      }
+    ],
+    "note": "Profile figures as of October 2026."
+  },
+  "impact": {
+    "intro": "The work I'm most often brought in for sits where the interface meets the database: pages that feel slow because of what happens behind them.",
+    "highlights": [
+      {
+        "value": "75 → 3",
+        "label": "Database queries on one e-commerce page",
+        "context": "After restructuring how the page loaded its data. That page's load time came down to roughly one second.",
+        "projectSlug": ""
+      },
+      {
+        "value": "~4 s → <1 s",
+        "label": "Page load time",
+        "context": "A separately reported measurement, not a comparison with the figure above.",
+        "projectSlug": ""
+      }
+    ],
+    "themes": [
+      {
+        "title": "Database query optimization",
+        "description": "Finding N+1 patterns and redundant queries, then reshaping data access around what each page needs."
+      },
+      {
+        "title": "API and backend architecture",
+        "description": "Laravel applications and REST APIs designed around the screens and integrations that depend on them."
+      },
+      {
+        "title": "E-commerce performance",
+        "description": "Catalogue, product and checkout pages where load time translates directly into lost or completed orders."
+      },
+      {
+        "title": "Responsive frontend engineering",
+        "description": "Interfaces that hold up from large monitors down to small phones, built from the design file rather than approximated."
+      },
+      {
+        "title": "SaaS product development",
+        "description": "Taking products from MVP scope to an application that stays maintainable as real users arrive."
+      }
+    ]
+  },
+  "capabilities": [
+    {
+      "id": "frontend",
+      "layer": "Interface",
+      "title": "Frontend engineering",
+      "description": "Responsive, accessible interfaces with a component structure that stays maintainable as the product grows.",
+      "tools": [
+        "React",
+        "JavaScript",
+        "TypeScript",
+        "Alpine.js",
+        "Tailwind CSS",
+        "Bootstrap",
+        "Material UI",
+        "shadcn/ui",
+        "HTML",
+        "CSS"
+      ]
+    },
+    {
+      "id": "backend",
+      "layer": "Application",
+      "title": "Backend & API development",
+      "description": "Laravel applications, admin panels and REST APIs, with the business logic kept clear and testable.",
+      "tools": [
+        "PHP",
+        "Laravel",
+        "Livewire",
+        "Filament",
+        "REST APIs"
+      ]
+    },
+    {
+      "id": "data",
+      "layer": "Data",
+      "title": "Databases & performance",
+      "description": "Schema design, query optimization and the page-load improvements that follow from them.",
+      "tools": [
+        "MySQL",
+        "Database architecture",
+        "Query optimization",
+        "Performance optimization"
+      ]
+    },
+    {
+      "id": "products",
+      "layer": "Product",
+      "title": "E-commerce & SaaS",
+      "description": "Product platforms from the first MVP to the features that come after launch.",
+      "tools": [
+        "SaaS applications",
+        "E-commerce",
+        "MVP development"
+      ]
+    },
+    {
+      "id": "design",
+      "layer": "Craft",
+      "title": "Design to code",
+      "description": "Design files implemented faithfully in production code, including the states designers don't always draw.",
+      "tools": [
+        "Figma",
+        "Adobe XD",
+        "Canva"
+      ]
+    },
+    {
+      "id": "ai",
+      "layer": "Craft",
+      "title": "AI-assisted workflow",
+      "description": "AI coding tools to speed up delivery, inside a Git-based workflow on GitHub and GitLab.",
+      "tools": [
+        "AI-assisted development",
+        "Git",
+        "GitHub",
+        "GitLab"
+      ]
+    }
+  ],
+  "contact": {
+    "heading": "Have a product to build?",
+    "text": "Tell me what you're working on — a new product, an existing app that needs to be faster, or an interface that needs to be built properly. I'll reply by email.",
+    "emailjs": {
+      "serviceId": "service_2v3pdmj",
+      "templateId": "template_105hbsu",
+      "publicKey": "ai0ySokHar3c5tE5p"
+    }
+  },
+  "seo": {
+    "title": "Naod Alemu — Full-Stack Developer",
+    "description": "Naod Alemu is a full-stack developer in Addis Ababa building SaaS products, e-commerce platforms and APIs with Laravel, React and MySQL.",
+    "ogImage": "/og.png",
+    "twitterHandle": "",
+    "themeColor": "#F1EEE7"
+  },
+  "footer": {
+    "text": "Designed and built by Naod Alemu."
+  }
+}

@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>Naod Alemu | Full-Stack Developer | Résumé</title>
+<!--
+  Résumé source. Edit the text here, then export to PDF:
+  open this file in Chrome → Print → Save as PDF, A4, margins "None", background graphics on.
+  Elements with class="private" (phone number) are hidden in the public copy.
+-->
+<style>
+  @font-face { font-family: 'Instrument Sans'; font-weight: 400 700; src: url('../node_modules/@fontsource-variable/instrument-sans/files/instrument-sans-latin-wght-normal.woff2') format('woff2'); }
+  @font-face { font-family: 'JetBrains Mono'; font-weight: 400 700; src: url('../node_modules/@fontsource-variable/jetbrains-mono/files/jetbrains-mono-latin-wght-normal.woff2') format('woff2'); }
+
+  @page { size: A4; margin: 0; }
+  :root { --ink: #151513; --soft: #3b3934; --muted: #625e55; --rule: #d5cfc2; --signal: #c23b12; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  body { width: 210mm; min-height: 297mm; padding: 12mm 14mm 10mm; font: 9pt/1.38 'Instrument Sans', Arial, sans-serif; color: var(--ink); background: #fff; }
+  a { color: inherit; text-decoration: none; }
+
+  header { display: flex; justify-content: space-between; align-items: flex-end; gap: 8mm; padding-bottom: 4mm; border-bottom: 1.2pt solid var(--ink); }
+  h1 { font-size: 25pt; line-height: 1; font-weight: 650; letter-spacing: -0.03em; }
+  .title { margin-top: 2mm; font-size: 11pt; color: var(--soft); }
+  .contact { text-align: right; font: 7.6pt/1.6 'JetBrains Mono', monospace; color: var(--soft); }
+  .contact a { color: var(--ink); }
+
+  section { margin-top: 3.8mm; }
+  h2 { font: 600 7.4pt/1 'JetBrains Mono', monospace; letter-spacing: 0.08em; text-transform: uppercase; color: var(--muted); padding-bottom: 1.6mm; margin-bottom: 2.2mm; border-bottom: 0.6pt solid var(--rule); }
+  h2 span { color: var(--signal); }
+
+  .summary { font-size: 9.4pt; line-height: 1.45; color: var(--soft); }
+  .summary strong { color: var(--ink); font-weight: 600; }
+
+  .skills { display: grid; grid-template-columns: 27mm 1fr; row-gap: 1mm; column-gap: 3mm; }
+  .skills dt { font: 600 7.4pt/1.7 'JetBrains Mono', monospace; text-transform: uppercase; letter-spacing: 0.04em; color: var(--muted); }
+  .skills dd { color: var(--soft); }
+
+  .job { margin-top: 2.6mm; break-inside: avoid; }
+  .job:first-of-type { margin-top: 0; }
+  .job-head { display: flex; justify-content: space-between; align-items: baseline; gap: 4mm; }
+  .job-head h3 { font-size: 10.4pt; font-weight: 650; letter-spacing: -0.01em; }
+  .job-head h3 .org { font-weight: 450; color: var(--soft); }
+  .when { font: 7.4pt/1 'JetBrains Mono', monospace; color: var(--muted); white-space: nowrap; }
+  .job p.lead { margin-top: 0.8mm; color: var(--soft); }
+  ul { margin-top: 1.2mm; padding-left: 3.6mm; }
+  li { margin-top: 0.7mm; color: var(--soft); }
+  li::marker { color: var(--signal); }
+  li strong, p strong { color: var(--ink); font-weight: 600; }
+  .earlier { margin-top: 3mm; color: var(--soft); }
+
+  .projects { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2.4mm 5mm; }
+  .project h3 { font-size: 9.8pt; font-weight: 650; }
+  .project h3 a { border-bottom: 0.6pt solid var(--rule); }
+  .project .stack { font: 7pt/1.5 'JetBrains Mono', monospace; color: var(--muted); }
+  .project p { margin-top: 0.6mm; color: var(--soft); }
+
+  .bottom { display: grid; grid-template-columns: 1.5fr 1fr; gap: 6mm; }
+  .bottom p { color: var(--soft); }
+  .bottom strong { color: var(--ink); font-weight: 600; }
+</style>
+</head>
+<body>
+  <header>
+    <div>
+      <h1>Naod Alemu</h1>
+      <p class="title">Full-Stack Developer · Laravel, React &amp; MySQL</p>
+    </div>
+    <div class="contact">
+      <a href="mailto:naodalemu11@gmail.com">naodalemu11@gmail.com</a><span class="private"> · +251 902 290 081</span><br />
+      <a href="https://naods-portfolio.vercel.app/">naods-portfolio.vercel.app</a> · <a href="https://github.com/naodalemu">github.com/naodalemu</a><br />
+      <a href="https://www.linkedin.com/in/naod-alemu-a189a9376/">LinkedIn</a> · <a href="https://www.upwork.com/freelancers/~01cb9ac80cc3e1114e">Upwork</a> · Addis Ababa · Open to remote
+    </div>
+  </header>
+
+  <section>
+    <h2><span>01</span> Profile</h2>
+    <p class="summary">
+      Full-stack developer building SaaS products, e-commerce platforms and APIs with <strong>Laravel, React and MySQL</strong>,
+      from database design and business logic to the integrations between services and the interface on top. Currently working
+      across a <strong>six-service commerce platform</strong> at Barecare. <strong>Top Rated on Upwork with 100% Job Success</strong>.
+      Looking for a full-time remote role.
+    </p>
+  </section>
+
+  <section>
+    <h2><span>02</span> Skills</h2>
+    <dl class="skills">
+      <dt>Backend</dt><dd>PHP, Laravel, Livewire, Filament, REST APIs, Laravel Sanctum, queues &amp; scheduled jobs, service SDKs</dd>
+      <dt>Frontend</dt><dd>React, Next.js, TypeScript, JavaScript, Alpine.js, Tailwind CSS, shadcn/ui, Material UI, Figma to code</dd>
+      <dt>Data</dt><dd>MySQL, Redis / Valkey, schema design, query optimisation, performance tuning</dd>
+      <dt>Delivery</dt><dd>Docker, AWS, Vercel, Git, GitHub, GitLab, PHPUnit, Vitest, AI-assisted development</dd>
+    </dl>
+  </section>
+
+  <section>
+    <h2><span>03</span> Experience</h2>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Full-Stack Developer <span class="org">· Barecare (cosmetics e-commerce) · Remote</span></h3>
+        <span class="when">Oct 2025 – Present</span>
+      </div>
+      <ul>
+        <li>Build features across <strong>six Laravel services</strong> (storefront and admin, warehouse, B2B shop, influencer platform) and the shared SDKs that connect them; <strong>240+ commits</strong>.</li>
+        <li>Built shop ↔ warehouse order synchronisation and <strong>automatic discrepancy detection</strong> that compares SKU quantities between services and flags mismatched orders before they ship.</li>
+        <li>Cut database queries on a key admin listing <strong>from 75 to 3 per page</strong> by removing N+1 loading, taking its load time <strong>from ~4 s to under 1 s</strong>; rewrote storefront search from per-word correlated subqueries to a single locale-filtered query with exact barcode lookup.</li>
+        <li>Built B2B order import from CSV/XLSX with warehouse stock checks, and the in-store order flow with barcode scanning and <strong>MyPOS card-terminal</strong> payments.</li>
+        <li>Moved warehouse item statuses to a <strong>state machine</strong>; added coming-stock deliveries, priority and customs statuses, and short-expiry warnings.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>React Developer <span class="org">· VooGlue (DAG) · Remote</span></h3>
+        <span class="when">Feb 2025 – May 2026</span>
+      </div>
+      <ul>
+        <li>React development for DAG, a crypto presale platform for asset-backed art collectables, including its presale sales dashboard.</li>
+      </ul>
+    </div>
+
+    <div class="job">
+      <div class="job-head">
+        <h3>Freelance Developer <span class="org">· Upwork · Remote</span></h3>
+        <span class="when">Sep 2023 – Present</span>
+      </div>
+      <ul>
+        <li><strong>Top Rated, 100% Job Success, 5.0 across 11 completed jobs</strong>, with repeat clients: Figma-to-code builds, page builders, dashboards and AI-driven UI prototypes.</li>
+        <li>Designed and built the export website for <strong>Winna Trading PLC</strong>, a green-coffee exporter (React, TypeScript, Tailwind CSS).</li>
+      </ul>
+    </div>
+
+    <p class="earlier"><strong>Earlier:</strong> Front-End Developer Intern at Omishtu Joy Ag Tech Solutions (2024) and the Information Network Security Agency (2023).</p>
+  </section>
+
+  <section>
+    <h2><span>04</span> Selected projects</h2>
+    <div class="projects">
+      <div class="project">
+        <h3>Walk Out</h3>
+        <p class="stack">Laravel 12 · Sanctum · MySQL · React 19 · Tailwind</p>
+        <p>Founder and full-stack developer of a productivity platform in development. Versioned REST API with <strong>~85 models, 112 migrations and 101 test files</strong>.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://naods-portfolio.vercel.app/work/affordly">Affordly</a></h3>
+        <p class="stack">React 19 · TypeScript · Recharts · Vitest</p>
+        <p>Local-first mortgage readiness analyser for irregular incomes, with stress testing and a tested TypeScript financial engine.</p>
+      </div>
+      <div class="project">
+        <h3><a href="https://upwork-analytics-alpha.vercel.app/">Upwork Income Analytics</a></h3>
+        <p class="stack">Next.js · TypeScript · shadcn/ui · Recharts</p>
+        <p>Open-source dashboard turning Upwork exports into income and productivity insights, entirely in the browser.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="bottom">
+    <div>
+      <h2><span>05</span> Education</h2>
+      <p><strong>B.Eng. Computer Science and Engineering</strong><br />Adama Science and Technology University · 2025</p>
+    </div>
+    <div>
+      <h2><span>06</span> Languages</h2>
+      <p>English, Amharic</p>
+    </div>
+  </section>
+</body>
+</html>

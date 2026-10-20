@@ -1,0 +1,194 @@
+[
+  {
+    "id": "fixture-full",
+    "slug": "fixture-full",
+    "title": "Fixture: Every Field Filled",
+    "subtitle": "TEST CONTENT — exercises every optional field in the schema.",
+    "description": "TEST CONTENT. A fixture project used to verify layouts, galleries, metrics and links. It never appears on the real site.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 1,
+    "year": "2026",
+    "duration": "3 months",
+    "category": "E-commerce",
+    "projectType": "Client",
+    "status": "Live",
+    "role": "Full-Stack Developer",
+    "client": {
+      "name": "Hidden Name",
+      "descriptor": "A test client descriptor",
+      "disclose": false
+    },
+    "team": [
+      "1 designer",
+      "2 developers"
+    ],
+    "overview": "TEST overview paragraph one.\n\nTEST overview paragraph two.",
+    "problem": "TEST problem statement.",
+    "approach": "TEST approach.",
+    "solution": "TEST solution.",
+    "contributions": [
+      "TEST contribution one",
+      "TEST contribution two"
+    ],
+    "features": [
+      "TEST plain feature",
+      {
+        "title": "TEST feature with description",
+        "description": "Description text."
+      }
+    ],
+    "decisions": [
+      {
+        "title": "TEST decision",
+        "description": "Why it was made.",
+        "tradeoff": "What it cost."
+      }
+    ],
+    "challenges": [
+      {
+        "title": "TEST challenge",
+        "description": "How it was solved."
+      }
+    ],
+    "techStack": [
+      "React",
+      "Laravel",
+      "MySQL",
+      "Vercel",
+      "Git",
+      {
+        "name": "SomeUnknownTool",
+        "layer": "application"
+      }
+    ],
+    "metrics": [
+      {
+        "label": "TEST queries per page",
+        "value": "3",
+        "before": "75",
+        "unit": "",
+        "context": "TEST context for the metric."
+      },
+      {
+        "label": "TEST load time",
+        "value": "<1",
+        "unit": "s",
+        "context": "TEST second metric context."
+      }
+    ],
+    "results": [
+      "TEST result"
+    ],
+    "lessons": [
+      "TEST lesson"
+    ],
+    "constraints": [
+      "TEST constraint"
+    ],
+    "links": {
+      "live": "https://example.com",
+      "github": "https://github.com/example/example",
+      "caseStudy": "",
+      "figma": ""
+    },
+    "images": {
+      "cover": {
+        "src": "/projects/fixture-full/cover.webp",
+        "alt": "Fixture cover",
+        "caption": "TEST cover caption"
+      },
+      "thumbnail": "",
+      "desktop": [
+        {
+          "src": "/projects/fixture-full/desktop-01.webp",
+          "alt": "Fixture desktop",
+          "caption": "TEST desktop caption"
+        }
+      ],
+      "mobile": [
+        "/projects/fixture-full/mobile-01.webp",
+        "/projects/fixture-full/mobile-02.webp"
+      ],
+      "gallery": [
+        {
+          "src": "/projects/fixture-full/detail-01.webp",
+          "kind": "detail",
+          "alt": "Fixture detail"
+        }
+      ],
+      "beforeAfter": [
+        {
+          "before": "/projects/fixture-full/before-01.webp",
+          "after": "/projects/fixture-full/after-01.webp",
+          "label": "TEST pair",
+          "caption": "TEST pair caption"
+        }
+      ],
+      "video": null
+    },
+    "presentation": {
+      "caseStudy": "visual",
+      "accent": "#C9D3CC",
+      "frame": "auto"
+    },
+    "related": [
+      "fixture-minimal"
+    ]
+  },
+  {
+    "id": "fixture-minimal",
+    "slug": "fixture-minimal",
+    "title": "Fixture: Only Required Fields With A Deliberately Long Title That Must Wrap",
+    "description": "TEST CONTENT. Only the required fields — no images, no stack, no write-up.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 2
+  },
+  {
+    "id": "fixture-missing-image",
+    "slug": "fixture-missing-image",
+    "title": "Fixture: Missing Image",
+    "description": "TEST CONTENT. Its cover path points to a file that does not exist.",
+    "featured": true,
+    "published": true,
+    "sortOrder": 3,
+    "techStack": [
+      "Laravel",
+      "Livewire",
+      "MySQL"
+    ],
+    "presentation": {
+      "caseStudy": "technical"
+    },
+    "decisions": [
+      {
+        "title": "TEST technical-first ordering",
+        "description": "Decisions should appear before any gallery."
+      }
+    ],
+    "images": {
+      "cover": "/projects/fixture-missing-image/cover.webp"
+    }
+  },
+  {
+    "id": "fixture-index-only",
+    "slug": "fixture-index-only",
+    "title": "Fixture: Published Not Featured",
+    "description": "TEST CONTENT. Appears in the index list, not in Selected work.",
+    "featured": false,
+    "published": true,
+    "sortOrder": 4,
+    "year": 2024,
+    "category": "API"
+  },
+  {
+    "id": "fixture-draft",
+    "slug": "fixture-draft",
+    "title": "Fixture: Unpublished Draft",
+    "description": "TEST CONTENT. Must never be reachable in production.",
+    "featured": true,
+    "published": false,
+    "sortOrder": 0
+  }
+]
