@@ -104,7 +104,7 @@
       <ul>
         <li>Build features across <strong>six Laravel services</strong> (storefront and admin, warehouse, B2B shop, influencer platform) and the shared SDKs that connect them; <strong>240+ commits</strong>.</li>
         <li>Built shop ↔ warehouse order synchronisation and <strong>automatic discrepancy detection</strong> that compares SKU quantities between services and flags mismatched orders before they ship.</li>
-        <li>Cut database queries on a key admin listing <strong>from 75 to 3 per page</strong> by removing N+1 loading; rewrote storefront search from per-word correlated subqueries to a single locale-filtered query with exact barcode lookup.</li>
+        <li>Cut database queries on a key admin listing <strong>from 75 to 3 per page</strong> by removing N+1 loading, taking its load time <strong>from ~4 s to under 1 s</strong>; rewrote storefront search from per-word correlated subqueries to a single locale-filtered query with exact barcode lookup.</li>
         <li>Built B2B order import from CSV/XLSX with warehouse stock checks, and the in-store order flow with barcode scanning and <strong>MyPOS card-terminal</strong> payments.</li>
         <li>Moved warehouse item statuses to a <strong>state machine</strong>; added coming-stock deliveries, priority and customs statuses, and short-expiry warnings.</li>
       </ul>

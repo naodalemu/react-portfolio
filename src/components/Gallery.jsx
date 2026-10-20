@@ -21,6 +21,15 @@ export default function Gallery({ project }) {
 
   return (
     <div className="space-y-20 md:space-y-28">
+      {/* Before/after comes first: for a redesign it is the headline visual. */}
+      {images.beforeAfter.map((pair, index) => (
+        <div key={index} className="page-grid">
+          <div className="col-span-full lg:col-span-10 lg:col-start-2">
+            <BeforeAfter pair={pair} title={title} />
+          </div>
+        </div>
+      ))}
+
       {desktop.map((image, index) => (
         <Reveal as="figure" key={image.src} className="page-grid">
           <div className="col-span-full lg:col-span-10 lg:col-start-2">
@@ -87,14 +96,6 @@ export default function Gallery({ project }) {
           })}
         </ul>
       )}
-
-      {images.beforeAfter.map((pair, index) => (
-        <div key={index} className="page-grid">
-          <div className="col-span-full lg:col-span-10 lg:col-start-2">
-            <BeforeAfter pair={pair} title={title} />
-          </div>
-        </div>
-      ))}
 
       {images.video && (
         <figure className="page-grid">

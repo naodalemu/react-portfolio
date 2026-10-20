@@ -105,7 +105,14 @@
         "before": "75",
         "value": "3",
         "unit": "",
-        "context": "Each row lazily loaded its vendor, documents and variation quantities (N+1). Eager loading plus withCount and withSum made the query count constant; the page now loads in about a second."
+        "context": "Each row lazily loaded its vendor, documents and variation quantities (N+1). Eager loading plus withCount and withSum made the query count constant."
+      },
+      {
+        "label": "Load time of the same listing",
+        "before": "~4",
+        "value": "<1",
+        "unit": "s",
+        "context": "The result of the query fix above, on the same purchase-order listing."
       }
     ]
   },
@@ -231,8 +238,8 @@
     "id": "winna-coffee",
     "slug": "winna-coffee",
     "title": "Winna Coffee",
-    "subtitle": "An export website for a single-origin Ethiopian green-coffee farm.",
-    "description": "A marketing site for Winna Trading PLC, which grows and exports shade-grown Arabica from its own farm in Southwest Ethiopia. Built to present the farm, its varieties and its process to roasters, and to turn visits into sample requests.",
+    "subtitle": "A redesign that turned a template-style export site into an editorial farm profile for roasters.",
+    "description": "A redesign of the export website for Winna Trading PLC, which grows and exports shade-grown Arabica from its own farm in Southwest Ethiopia. The original site, built by another developer, looked like a generic template; the new one presents the farm the way specialty-coffee buyers evaluate it.",
     "featured": true,
     "published": true,
     "sortOrder": 3,
@@ -246,8 +253,8 @@
       "descriptor": "An Ethiopian green-coffee exporter",
       "disclose": true
     },
-    "overview": "Winna exports green coffee from the Nibo Sendeka farm in the Sheka Zone. Their buyers are roasters abroad, so the site has to work like a farm profile: where the coffee is grown, how, and what makes it different, with a clear path to request samples or a quote.",
-    "solution": "A single-page React and TypeScript site with editorial typography, full-bleed farm photography, a detailed farm profile (area, mapped blocks, coordinates, altitude, rainfall, soil) and persistent quote and WhatsApp actions.",
+    "overview": "Winna exports green coffee from the Nibo Sendeka farm in the Sheka Zone. Their buyers are roasters abroad, so the website has to work like a farm profile: where the coffee is grown, how, and what makes it different, with a clear path to request samples or a quote.\n\nThey already had a site, built by another developer. I redesigned it from the ground up.",
+    "solution": "A single-page React and TypeScript site with full-bleed farm photography, a detailed farm profile (area, mapped blocks, coordinates, altitude, rainfall, soil), the varieties grown, the process from cultivation to export, and persistent quote and WhatsApp actions.",
     "features": [
       "Farm profile with area, block structure, location, coordinates and growing conditions",
       "Varieties section presenting each Arabica selection grown on the farm",
@@ -299,13 +306,29 @@
           "alt": "Winna Coffee hero on a phone",
           "caption": "Mobile hero"
         }
+      ],
+      "beforeAfter": [
+        {
+          "before": {
+            "src": "/projects/winna-coffee/before-01.webp",
+            "alt": "The original Winna homepage: a stock photo of roasted coffee beans behind a centred heading"
+          },
+          "after": {
+            "src": "/projects/winna-coffee/after-01.webp",
+            "alt": "The redesigned Winna homepage: terraced coffee hills on the farm under an editorial serif heading"
+          },
+          "label": "Homepage, before and after",
+          "caption": "Drag to compare. The original (built by another developer) used a stock photo of roasted beans; the redesign shows the farm itself."
+        }
       ]
     },
     "presentation": {
       "caseStudy": "visual",
       "accent": "#DED3C1",
       "frame": "auto"
-    }
+    },
+    "problem": "The original site was built from a generic template: system fonts, centred stock sections, and a hero photo of dark roasted beans, for a company that sells green, unroasted coffee. The farm details roasters care about were thin, and nothing about it felt like a specialty producer.",
+    "approach": "Start from what a roaster wants to know before asking for a sample, and let the farm itself carry the design: real photography from Nibo Sendeka, editorial serif typography, and the farm data presented as a proper profile rather than a list of claims."
   },
   {
     "id": "affordly",

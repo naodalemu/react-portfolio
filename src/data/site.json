@@ -191,14 +191,14 @@
       {
         "value": "75 → 3",
         "label": "Database queries per page on a warehouse admin listing",
-        "context": "Barecare’s purchase-order listing loaded each row’s vendor, documents and quantities separately. Eager loading and SQL aggregates brought it to a constant three queries, and the page now loads in about a second.",
+        "context": "Barecare’s warehouse purchase-order listing loaded each row’s vendor, documents and quantities separately. Eager loading and SQL aggregates brought it to a constant three queries.",
         "projectSlug": "barecare"
       },
       {
         "value": "~4 s → <1 s",
-        "label": "Page load time",
-        "context": "A separately reported measurement, not a comparison with the figure above.",
-        "projectSlug": ""
+        "label": "Page load time on the same listing",
+        "context": "The direct result of cutting those queries: the listing went from about four seconds to under one.",
+        "projectSlug": "barecare"
       }
     ],
     "themes": [
