@@ -39,7 +39,7 @@ export default function Hero() {
     >
       <ImageTrail images={hero.trail ?? []} containerRef={root} />
 
-      <div className="page-grid relative z-10 flex-1 content-center gap-y-10 py-14 md:py-20">
+      <div className="page-grid relative flex-1 content-center gap-y-10 py-14 md:py-20">
         <div className="col-span-full flex flex-wrap items-baseline justify-between gap-x-8 gap-y-2" data-hero-fade>
           <p className="label text-paper">{hero.eyebrow}</p>
           <p className="label hidden [@media(pointer:fine)]:block">Move your cursor ↗</p>
@@ -58,7 +58,8 @@ export default function Hero() {
           <p className="text-lede text-fog" data-hero-fade>
             {hero.lede}
           </p>
-          <div className="flex flex-wrap items-center gap-x-8 gap-y-4" data-hero-fade>
+          {/* Above the image trail (z-20) so the actions stay visible and clickable. */}
+          <div className="relative z-30 flex flex-wrap items-center gap-x-8 gap-y-4" data-hero-fade>
             <Magnetic>
               <Link
                 to="/#work"
